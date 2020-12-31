@@ -9,3 +9,4 @@
 5. [HashTable(해시테이블)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/HashTable "HashTable(해시테이블)")
 6. [Breadth-First-Search(너비우선탐색)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/Breadth-First-Search "Breadth-First-Search(너비우선탐색)")
 7. [Dijkstra'sAlgorithm(다익스트라 알고리즘)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/Dijkstra'sAlgorithm "Dijkstra'sAlgorithm(다익스트라 알고리즘)")
+8. [Greedy_Algorithm(탐욕(그리디) 알고리즘)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/Greedy_Algorithm "Greedy_Algorithm(다익스트라 알고리즘)")
