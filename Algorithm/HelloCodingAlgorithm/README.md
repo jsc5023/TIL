@@ -12,3 +12,5 @@
 8. [Greedy_Algorithm(탐욕(그리디) 알고리즘)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/Greedy_Algorithm "Greedy_Algorithm(다익스트라 알고리즘)")
 9. [Dynamic_Programing(동적 프로그래밍)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/Dynamic_Programing "Dynamic_Programing(동적 프로그래밍)")
 10. [KNN_Algorithm(KNN 알고리즘)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/KNN_Algorithm "KNN_Algorithm(KNN 알고리즘)")
+11. [Etc(기타 알고리즘)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/HelloCodingAlgorithm/Etc "Etc_Algorithm(기타 알고리즘)")
+
