@@ -5,6 +5,6 @@
 
 이진 탐색 트리는 아래의 그림처럼 생겼습니다.
 
-![이진탐색트리](https://user-images.githubusercontent.com/60413291/109017489-9219d480-76fa-11eb-9261-48d578a17a88.png)
+![image](https://user-images.githubusercontent.com/60413291/109017934-fd63a680-76fa-11eb-9ba9-c1eb9af76799.png)
 
 모든 정점에 대해 왼쪽에는 더 작은 값을 가진 정점, 오른쪽에는 더 큰값을 가진 정점이 오게 됩니다.
