@@ -6,10 +6,16 @@ namespace Program
     {
         public static int[] thePouring(int[] capacities, int[] bottles, int[] fromId, int[] toId)
         {
-            int[] Value = { 0, 1 };
+            for (int i = 0; i < fromId.Length; i++)
+            {
+                if(i != fromId.Length)
+                {
+                    bottles[i+1] = bottles[i] + bottles[i + 1];
+                    bottles[i] = 0;
+                }
+            }
 
-            Value[1] = bottles[0] + bottles[1];
-            return Value;
+            return bottles;
         }
         static void Main(string[] args)
         {
@@ -22,8 +28,11 @@ namespace Program
             // Example 2 capacities = {30. 20, 10}, bottles {10, 5, 5}, fromId = {0,1,2}, toId = {1,2,0}, Returns : {10, 10, 0} 
             // Example 3 capacities = {14. 35, 86, 48, 25, 62}, bottles {6, 34, 27, 38, 9, 60}, fromId = {1, 2, 4, 5, 3, 3, 1, 0}, toId = {0, 1, 2, 4, 2, 5, 3, 1}, Returns : {0, 14, 65, 35, 25, 35} 
             // Example 4 capacities = {700000, 800000, 900000, 1000000}, bottles {478478, 478478, 478478, 478478, 478478}, fromId = {2, 3, 2, 0, 1}, toId = {0, 1, 1, 3, 2}, Returns : {0, 156956, 900000, 856956} 
-            thePouring(capacities, bottles, fromId, toId);
-            Console.WriteLine("Hello World!");
+            int[] value = thePouring(capacities, bottles, fromId, toId);
+            for (int i = 0; i < bottles.Length; i++)
+            {
+                Console.WriteLine(value[i].ToString());
+            }
         }
     }
 }
