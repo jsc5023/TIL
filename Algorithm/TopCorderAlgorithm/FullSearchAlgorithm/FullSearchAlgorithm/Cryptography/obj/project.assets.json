@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\BestInvitation.csproj",
-      "projectName": "BestInvitation",
-      "projectPath": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\BestInvitation.csproj",
+      "projectUniqueName": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\Cryptography\\Cryptography.csproj",
+      "projectName": "Cryptography",
+      "projectPath": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\Cryptography\\Cryptography.csproj",
       "packagesPath": "C:\\Users\\solva\\.nuget\\packages\\",
-      "outputPath": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\obj\\",
+      "outputPath": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\Cryptography\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
