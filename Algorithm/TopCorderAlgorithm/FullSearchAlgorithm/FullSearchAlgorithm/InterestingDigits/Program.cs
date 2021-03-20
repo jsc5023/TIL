@@ -4,13 +4,15 @@ namespace InterestingDigits
 {
     class InterestingDigits
     {
-        
         public static int[] digits(int bas)
         {
-            int[] ans = new int[bas - 2]; // 임시로 리턴값을 지정, 값을 어떻게 구해야 할 지 잘 감이 잡히지 않음
+            // 잘 감이 안잡혀서 문제 해설을 참고하여 푼 문제이다.
+            // 핵심은 4자리 미만이라는 조건이다.
+            // 3자리 까지만 고려하면 되므로, 1의 자리, 2의자리, 3의 자리 모두 확인해 보면된다.
+            int[] ans = new int[bas - 2]; 
             for (int i = 2  ; i < bas; i++)
             {
-
+               
             }
             return ans;
         }
