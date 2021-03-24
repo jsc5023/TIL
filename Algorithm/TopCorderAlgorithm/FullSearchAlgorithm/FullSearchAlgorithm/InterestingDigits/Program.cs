@@ -76,6 +76,18 @@ namespace InterestingDigits
             return ans.ToArray();
         }
 
+
+        public static int[] digitsApplicationSolution(int bas)
+        {
+            List<int> ans = new List<int>();
+
+            for (int i = 2; i < bas; i++)
+            {
+                if ((bas - 1) % i == 0) ans.Add(i);
+            }
+
+            return ans.ToArray();
+        }
         static void Main(string[] args)
         {
             // Example 1
@@ -92,11 +104,16 @@ namespace InterestingDigits
 
             int bas = 10;
 
+            //for (int i = 0; i < digits(bas).Length; i++)
+            //{
+            //    Console.WriteLine(digits(bas)[i]);
+            //}
+
             for (int i = 0; i < digits(bas).Length; i++)
             {
-                Console.WriteLine(digits(bas)[i]);
-        }
-            
+                Console.WriteLine(digitsApplicationSolution(bas)[i]);
+            }
+
         }
     }
 }
