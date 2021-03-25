@@ -1,0 +1,10 @@
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.deps.json
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.runtimeconfig.json
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.runtimeconfig.dev.json
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.dll
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.pdb
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.csproj.CoreCompileInputs.cache
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.AssemblyInfoInputs.cache
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.AssemblyInfo.cs
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.dll
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.pdb
