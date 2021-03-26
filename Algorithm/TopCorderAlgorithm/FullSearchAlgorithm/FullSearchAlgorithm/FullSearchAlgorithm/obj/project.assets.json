@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\solva\\.nuget\\packages\\": {},
+    "C:\\Users\\JSC\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\BestInvitation.csproj",
+      "projectUniqueName": "D:\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\BestInvitation.csproj",
       "projectName": "BestInvitation",
-      "projectPath": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\BestInvitation.csproj",
-      "packagesPath": "C:\\Users\\solva\\.nuget\\packages\\",
-      "outputPath": "D:\\JSC\\개인자료\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\obj\\",
+      "projectPath": "D:\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\BestInvitation.csproj",
+      "packagesPath": "C:\\Users\\JSC\\.nuget\\packages\\",
+      "outputPath": "D:\\TIL\\Algorithm\\TopCorderAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\FullSearchAlgorithm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\solva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JSC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

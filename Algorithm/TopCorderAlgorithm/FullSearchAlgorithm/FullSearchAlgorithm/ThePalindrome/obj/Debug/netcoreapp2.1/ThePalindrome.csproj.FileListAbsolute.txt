@@ -8,3 +8,14 @@ D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSea
 D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.AssemblyInfo.cs
 D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.dll
 D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.pdb
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.deps.json
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.runtimeconfig.json
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.runtimeconfig.dev.json
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.dll
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\bin\Debug\netcoreapp2.1\ThePalindrome.pdb
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.csprojAssemblyReference.cache
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.csproj.CoreCompileInputs.cache
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.AssemblyInfoInputs.cache
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.AssemblyInfo.cs
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.dll
+D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.pdb
