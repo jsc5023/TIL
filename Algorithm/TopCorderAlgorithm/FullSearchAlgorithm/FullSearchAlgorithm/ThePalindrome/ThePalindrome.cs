@@ -48,6 +48,25 @@ namespace ThePalindrome
             return ans.Length; 
         }
 
+        public static int findBasicSolution(string s)
+        {
+            // 조건이 아무것도 없을때 계속 증가함 어짜피 회문은 반드시 나오기 떄문에 
+            for (int i = s.Length; ; i++)
+            {
+                bool flag = true;
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if((i - j - 1) < s.Length && s[j] != s[i - j - 1])
+                    {
+                        flag = false;
+                        break;
+                    }
+
+                    if (flag) return i;
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
             // Example 1 string s = "abab";
@@ -62,7 +81,7 @@ namespace ThePalindrome
             // Example 4 string s = "abdfhdyrbdbsdfghjkllkjhgfds"
             // Returns : 38
 
-            Console.WriteLine(find("abacaba")); // 아직 해답 안나옴
+            Console.WriteLine(findBasicSolution("abab")); // 아직 해답 안나옴
         }
     }
 }
