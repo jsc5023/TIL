@@ -19,3 +19,4 @@ D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\TheP
 D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.AssemblyInfo.cs
 D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.dll
 D:\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.pdb
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\ThePalindrome\obj\Debug\netcoreapp2.1\ThePalindrome.csprojAssemblyReference.cache

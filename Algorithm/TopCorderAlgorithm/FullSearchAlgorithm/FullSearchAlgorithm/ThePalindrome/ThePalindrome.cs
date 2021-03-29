@@ -8,42 +8,36 @@ namespace ThePalindrome
     {
         public static int find(string s){
             string ans = "";
-            string TempString = "";
-            string TempReverseString = "";
-            TempString = s;
-
-            for (int j = TempString.Length - 1; j >= 0; j--)
+            string ReverseString = "";
+            string SumString = "";
+            string RightJudgeString = "";
+            string LeftJudgeString = "";
+            int n = 0;
+            for (int i = s.Length - 2; i >= 0; i--)
             {
-                TempReverseString = TempReverseString + TempString[j];
+                ReverseString = ReverseString + s[i];
             }
 
-
-            if (TempReverseString == TempString)
+            for (int i = 0; i < s.Length; i++)
             {
-                ans = TempString;
-                return ans.Length;
+                SumString = s + ReverseString;
             }
-            TempReverseString = "";
-            //for (int i = s.Length; i < 50; i++)
-            //{
-            //    for (char j = 'a'; j <= 'z'; j++)
-            //    {
-            //        TempString = s + j;
-            //        for (int k = TempString.Length - 1; k >= 0; k--)
-            //        {
-            //            TempReverseString = TempReverseString + TempString[k];
-            //        }
 
-            //        if (TempReverseString == TempString)
-            //        {
-            //            ans = TempString;
-            //            break;
-            //        }
-
-            //        TempReverseString = "";
-            //    }
-            //} 다시 생각해보기
-
+            for (int i = decimal.ToInt32(Math.Round((decimal)s.Length / 2)); i < SumString.Length; i++)
+            {
+                RightJudgeString = "";
+                LeftJudgeString = "";
+                for (int j = 1; j <=i; j++)
+                {
+                    RightJudgeString = RightJudgeString + SumString[i - j];
+                    LeftJudgeString = LeftJudgeString + SumString[i + j];
+                }
+                if(RightJudgeString == LeftJudgeString)
+                {
+                    ans = RightJudgeString + LeftJudgeString + "c"; // c는 그냥 임의의 값입니다.
+                    return ans.Length;
+                }
+            }
 
             return ans.Length; 
         }
@@ -81,7 +75,7 @@ namespace ThePalindrome
             // Example 4 string s = "abdfhdyrbdbsdfghjkllkjhgfds"
             // Returns : 38
 
-            Console.WriteLine(findBasicSolution("abab")); // 아직 해답 안나옴
+            Console.WriteLine(find("qwerty")); // Example 2에서 값이 다르기 떄문에 좀더 수정이 필요
         }
     }
 }
