@@ -13,6 +13,19 @@ namespace ThePalindrome
             string RightJudgeString = "";
             string LeftJudgeString = "";
             int n = 0;
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                ReverseString = ReverseString + s[i];
+            }
+
+            if (s == ReverseString)
+            {
+                ans = ReverseString;
+                return ans.Length;
+            }
+
+            ReverseString = "";
+
             for (int i = s.Length - 2; i >= 0; i--)
             {
                 ReverseString = ReverseString + s[i];
@@ -22,6 +35,9 @@ namespace ThePalindrome
             {
                 SumString = s + ReverseString;
             }
+
+
+
 
             for (int i = decimal.ToInt32(Math.Round((decimal)s.Length / 2)); i < SumString.Length; i++)
             {
@@ -72,10 +88,7 @@ namespace ThePalindrome
             // Example 3 string s = "qwerty"
             // Returns : 11
 
-            // Example 4 string s = "abdfhdyrbdbsdfghjkllkjhgfds"
-            // Returns : 38
-
-            Console.WriteLine(find("qwerty")); // Example 2에서 값이 다르기 떄문에 좀더 수정이 필요
+            Console.WriteLine(findBasicSolution("qwerty")); // 자체 풀이보다 더 좋은 풀이 찾기
         }
     }
 }
