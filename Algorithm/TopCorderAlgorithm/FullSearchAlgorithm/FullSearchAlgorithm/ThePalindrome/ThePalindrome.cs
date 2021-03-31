@@ -60,6 +60,7 @@ namespace ThePalindrome
 
         public static int findBasicSolution(string s)
         {
+            // 가장 오른쪽 문자는 가장 왼쪽의 문자로 자동결정이 된다.
             // 조건이 아무것도 없을때 계속 증가함 어짜피 회문은 반드시 나오기 떄문에 
             for (int i = s.Length; ; i++)
             {
