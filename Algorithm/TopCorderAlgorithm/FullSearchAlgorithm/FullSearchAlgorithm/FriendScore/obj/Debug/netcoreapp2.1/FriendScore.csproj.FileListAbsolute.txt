@@ -1,0 +1,11 @@
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\obj\Debug\netcoreapp2.1\FriendScore.csprojAssemblyReference.cache
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\obj\Debug\netcoreapp2.1\FriendScore.csproj.CoreCompileInputs.cache
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\obj\Debug\netcoreapp2.1\FriendScore.AssemblyInfoInputs.cache
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\obj\Debug\netcoreapp2.1\FriendScore.AssemblyInfo.cs
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\bin\Debug\netcoreapp2.1\FriendScore.deps.json
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\bin\Debug\netcoreapp2.1\FriendScore.runtimeconfig.json
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\bin\Debug\netcoreapp2.1\FriendScore.runtimeconfig.dev.json
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\bin\Debug\netcoreapp2.1\FriendScore.dll
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\bin\Debug\netcoreapp2.1\FriendScore.pdb
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\obj\Debug\netcoreapp2.1\FriendScore.dll
+D:\JSC\개인자료\TIL\Algorithm\TopCorderAlgorithm\FullSearchAlgorithm\FullSearchAlgorithm\FriendScore\obj\Debug\netcoreapp2.1\FriendScore.pdb
