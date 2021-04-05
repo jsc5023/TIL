@@ -16,11 +16,26 @@ namespace FriendScore
                 cnt = 0;
                 for (int j = 0; j < n; j++)
                 {
+                    if (i == j) continue; // 자기자신일때는 continue로 뛰어넘는다.
+
                     if (friends[i][j] == 'Y')
                         cnt++;
+
+                    else
+                    {
+                        for (int k = 0; k < n; k++)
+                        {
+                            if(friends[j][k] == 'Y' && friends[k][i] == 'Y')
+                            {
+                                cnt++;
+                                break;
+                            }
+                        }
+                    }
                 }
+                ans = Math.Max(ans, cnt);
             }
-            ans = cnt;
+           
             return ans;
         }
 
@@ -35,7 +50,7 @@ namespace FriendScore
             // Returns : 2
 
             // Example 3
-            // string[] friends = {"NYNNN", "YNYNN", "NYNYN", "NNYNY", "NNNYN"}
+            //string[] friends = { "NYNNN", "YNYNN", "NYNYN", "NNYNY", "NNNYN" };
             // Returns : 4
             Console.WriteLine(highestScore(friends));
         }
