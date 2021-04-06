@@ -7,6 +7,7 @@ namespace FriendScore
         // TODO
         public static int highestScore(string[] friends)
         {
+            // else 부분은 해설을 참조하며 사용했습니다.
             //일단 직접 친구만 구하는 수식을 구했음
             int ans = 0;
             int n = friends[0].Length; // 처음사람의 사람과의 관계를 잡는다.(직접 친구 찾기)
@@ -27,6 +28,7 @@ namespace FriendScore
                         {
                             if(friends[j][k] == 'Y' && friends[k][i] == 'Y')
                             {
+                                // friends[0]
                                 cnt++;
                                 break;
                             }
