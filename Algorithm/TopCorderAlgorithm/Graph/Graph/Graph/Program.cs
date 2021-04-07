@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Graph
 {
@@ -24,6 +25,27 @@ namespace Graph
         //    }
         //    return ret;
         //}
+
+        // 너비 우선 탐색 구현
+        //static void bfs()
+        //{
+        //    Queue<T> q = new Queue<T>();
+        //    q.Enqueue(초기 상태);
+        //    while (q.Count != 0)
+        //    {
+        //        T now = q.Dequeue();
+        //        for (int i = 0; i < 다음 상태 개수; i++)
+        //        {
+        //            T next = i번째 다음 상태;
+        //            if (next를 방문했었는지 판정)
+        //            {
+        //                q.Dequeue(next);
+        //            }
+                       
+        //        }
+        //    }
+        //}
+       
 
         static void Main(string[] args)
         {
