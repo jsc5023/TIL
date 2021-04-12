@@ -15,4 +15,4 @@ git push origin master
 
 (참조 링크)
 <br/> 
-[참조 링크](https://stackoverflow.com/questions/7927230/remove-directory-from-remote-repository-after-adding-them-to-gitignore "스택오버플로우의 gitignore의 이미 커밋되있는 파일 제거(로컬에는 영향 없음)"))q
+[참조 링크](https://stackoverflow.com/questions/7927230/remove-directory-from-remote-repository-after-adding-them-to-gitignore "스택오버플로우의 gitignore의 이미 커밋되있는 파일 제거(로컬에는 영향 없음)")
