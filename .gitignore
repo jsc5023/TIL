@@ -1,2 +1,6 @@
 // visual studio 설정파일
 *.vs
+
+// bin, obj 폴더 제거
+bin/
+obj/
