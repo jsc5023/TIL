@@ -11,8 +11,8 @@ Simulation은 간단한 알고리즘의 예제 코드가 작성되었습니다.
 FullSearchAlgorithm(전체탐색) 
 예제1 
 1. [BasicPrograming(기본프로그래밍(딕셔너리 사용방법))](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/TopCoderAlgorithm/BasicPrograming "BasicPrograming(기본프로그래밍(딕셔너리 사용방법)") 
-2. [KiwiJuiceEasy(키위주스(시뮬레이션문제))](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/TopCoderAlgorithm/Simulation/KiwiJuce/KiwiJuiceEasy "KiwiJuiceEasy(키위주스)") 
-3. [FullSearchAlgorithm(전체검색 알고리즘)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/TopCoderAlgorithm/FullSearchAlgorithm/FullSearchAlgorithm "FullSearchAlgorithm (전체검색 알고리즘)") 
+2. [KiwiJuiceEasy(키위주스(시뮬레이션문제))](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/TopCoderAlgorithm/Simulation/KiwiJuiceEasy "KiwiJuiceEasy(키위주스)") 
+3. [FullSearchAlgorithm(전체검색 알고리즘)](https://github.com/JungSeongCheol/TIL/tree/master/Algorithm/TopCoderAlgorithm/FullSearchAlgorithm "FullSearchAlgorithm (전체검색 알고리즘)") 
 
 각 폴더마다 그 제목에 맞는 Readme가 업데이트 될 예정입니다.
 C#의 문법을 위주로 작성된 내용입니다.
