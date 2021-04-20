@@ -5,12 +5,12 @@ namespace CrazyBot
     class CrazyBot
     {
         // 우선 책을 참조해서 풀어나갑니다.(깊이우선탐색을 이해하기 편하게 하기  위해
-        bool[,] grid = new bool[100, 100];
-        int[] vx = new int[4] { 1, -1, 0, 0 };
-        int[] vy = new int[4] { 0, 0, 1, -1 };
-        double[] prob = new double[4];
+        static bool[,] grid = new bool[100, 100];
+        static int[] vx = new int[4] { 1, -1, 0, 0 };
+        static int[] vy = new int[4] { 0, 0, 1, -1 };
+        static double[] prob = new double[4];
 
-        public double getProbability(int n, int east, int west, int south, int north)
+        static public double getProbability(int n, int east, int west, int south, int north)
         {
             // 기본적으로 모든 값을 찾아야 되고, 많은 스택을 사용하지는 않으므로 깊이우선탐색으로 문제를 풀어나갑니다.
             prob[0] = east / 100.0;
@@ -21,12 +21,18 @@ namespace CrazyBot
             return dfs(50, 50, n);
         }
 
-        double dfs(int x, int y, int n)
+        static double dfs(int x, int y, int n)
         {
-            if (grid[x, y]) return 0;
-            if (n == 0) return 1;
+            if (grid[x, y])
+            {
+                return 0;
+            }
+            if (n == 0)
+            {
+                return 1;
+            }// n = 1 이면 100퍼센트 성공하므로
 
-            grid[x, y] = true;
+            grid[x, y] = true; // dfs에서 통과한 지점입니다.
             double ret = 0;
             for (int i = 0; i < 4; i++)
             {
@@ -64,7 +70,7 @@ namespace CrazyBot
             //int south = 0;
             //int north = 50;
             //return 1.0;
-            //Console.WriteLine(getProbability(n, east, west, south, north);
+            Console.WriteLine(getProbability(n, east, west, south, north));
         }
     }
 }
