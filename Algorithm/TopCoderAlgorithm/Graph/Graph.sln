@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph", "Graph\Graph.csproj", "{34E6AD8A-F829-47F4-9716-80993EC8DF1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrazyBot", "CrazyBot\CrazyBot.csproj", "{234B1734-09F2-4304-A1B7-51AB324A1CC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MazeMaker", "MazeMaker\MazeMaker.csproj", "{65D7E48D-C67E-4A4E-B2AA-6CF978882DE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34E6AD8A-F829-47F4-9716-80993EC8DF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E6AD8A-F829-47F4-9716-80993EC8DF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E6AD8A-F829-47F4-9716-80993EC8DF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E6AD8A-F829-47F4-9716-80993EC8DF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{234B1734-09F2-4304-A1B7-51AB324A1CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234B1734-09F2-4304-A1B7-51AB324A1CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234B1734-09F2-4304-A1B7-51AB324A1CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234B1734-09F2-4304-A1B7-51AB324A1CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D7E48D-C67E-4A4E-B2AA-6CF978882DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D7E48D-C67E-4A4E-B2AA-6CF978882DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D7E48D-C67E-4A4E-B2AA-6CF978882DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D7E48D-C67E-4A4E-B2AA-6CF978882DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCDABB0F-11C8-4A42-8C59-16BE1854556D}
+	EndGlobalSection
+EndGlobal
