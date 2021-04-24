@@ -1,7 +1,5 @@
 // visual studio 설정파일(.csproj), Csharp 프로젝트 파일 (.csproj) 제외
 *.vs
-*.csproj
-
 // bin, obj 폴더 제거
 bin/
 obj/
