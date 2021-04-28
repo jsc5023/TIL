@@ -21,6 +21,38 @@ namespace MazeMaker
 
             Queue<int> queueX = new Queue<int>();
             Queue<int> queueY = new Queue<int>();
+            queueX.Enqueue(startCol);
+            queueY.Enqueue(startRow);
+
+
+            while (queueX.Count > 0)
+            {
+                int x = queueX.Dequeue(), y = queueY.Dequeue();
+
+                for (int i = 0; i < moveRow.Length; i++)
+                {
+                    int nextX = x + moveCol[i], nextY = y + moveRow[i];
+
+                    if (0 <= nextX && nextX < width && 0 <= nextY && nextY < height && board[nextY, nextX] == -1 && maze[nextY].Substring(nextX, 1) == ".")
+                    {
+                        board[nextY, nextX] = board[y, x] + 1;
+                        queueX.Enqueue(nextX);
+                        queueY.Enqueue(nextY);
+                    }
+                }
+            }
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    if (maze[i].Substring(j, 1) == "." && board[i, j] == -1)
+                        return -1;
+                    max = Math.Max(max, board[i, j]);
+                }
+            }
+
+            return max;
 
         }
 
