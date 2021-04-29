@@ -62,19 +62,57 @@ namespace MazeMaker
         }
 
         // 재풀이
-        public static longestPathSelfSolution(string[] maze, int startRow, int startCol, int[] moveRow, int[] moveCol)
+        public static int longestPathSelfSolution(string[] maze, int startRow, int startCol, int[] moveRow, int[] moveCol)
         {
+            int max = 0;
+            int width = maze[0].Length;
+            int height = maze.Length;
+            int[,] board = new int[height, width];
 
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    board[i, j] = -1;
+                }
+            }
+
+            board[startCol, startRow] = 0;
+
+            Queue<int> queueX = new Queue<int>();
+            Queue<int> queueY = new Queue<int>();
+
+            queueX.Enqueue(startCol);
+            queueY.Enqueue(startRow);
+
+            while (queueX.Count > 0)
+            {
+                int x = queueX.Dequeue(), y = queueY.Dequeue();
+
+                for (int i = 0; i < moveCol.Length; i++)
+                {
+                    int nextX = x + moveCol[i], nextY = y + moveRow[i];
+
+                    if(0 <= nextX && nextX <= width && 0 <= nextY && nextY <= height && board[nextX,nextY] == -1 && maze[nextY].Substring(nextX, 1) == ".")
+                    {
+                        board[nextY, nextX] = board[y, x] + 1;
+
+                        // 다음꺼 준비(TODO)
+                    }
+                }
+            }
+            
+            return max;
         }
 
         static void Main(string[] args)
         {
             // Example 1
-            //string[] maze = { "...", "...", "..." };
-            //int startRow = 0;
-            //int startCol = 1;
-            //int[] moveRow = { 1, 0, -1, 0 };
-            //int[] moveCol = { 0, 1, 0, -1 };
+            string[] maze = { "...", "...", "..." };
+            int startRow = 0;
+            int startCol = 1;
+            int[] moveRow = { 1, 0, -1, 0 };
+            int[] moveCol = { 0, 1, 0, -1 };
             //return 3;
 
             // Example 2
