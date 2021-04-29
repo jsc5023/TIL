@@ -51,9 +51,9 @@ namespace MazeMaker
             {
                 for (int j = 0; j < width; j++)
                 {
-                    if (maze[i].Substring(j, 1) == "." && board[i, j] == -1)
+                    if (maze[i].Substring(j, 1) == "." && board[i, j] == -1) // 갈수있는 모든곳을 다돌았는데 가지 못한곳이 있을경우 그값을 가져옵니다.(못가면 -1)
                         return -1;
-                    max = Math.Max(max, board[i, j]);
+                    max = Math.Max(max, board[i, j]); // 만약 모든 구역을 다 갈 수 있다면 도착한 최대값을 반환합니다.
                 }
             }
 
@@ -61,14 +61,20 @@ namespace MazeMaker
 
         }
 
+        // 재풀이
+        public static longestPathSelfSolution(string[] maze, int startRow, int startCol, int[] moveRow, int[] moveCol)
+        {
+
+        }
+
         static void Main(string[] args)
         {
             // Example 1
-            string[] maze = { "...", "...", "..." };
-            int startRow = 0;
-            int startCol = 1;
-            int[] moveRow = { 1, 0, -1, 0 };
-            int[] moveCol = { 0, 1, 0, -1 };
+            //string[] maze = { "...", "...", "..." };
+            //int startRow = 0;
+            //int startCol = 1;
+            //int[] moveRow = { 1, 0, -1, 0 };
+            //int[] moveCol = { 0, 1, 0, -1 };
             //return 3;
 
             // Example 2
@@ -76,7 +82,7 @@ namespace MazeMaker
             //int startRow = 0;
             //int startCol = 1;
             //int[] moveRow = { 1, 0, -1, 0, 1, 1, -1, -1 };
-            //int[] moveCol = { 0, 1, 0, -1 , 1, -1, 1, -1};
+            //int[] moveCol = { 0, 1, 0, -1, 1, -1, 1, -1 };
             //return 2
 
             // Example 3
