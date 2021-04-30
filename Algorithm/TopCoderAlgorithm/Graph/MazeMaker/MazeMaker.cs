@@ -77,7 +77,7 @@ namespace MazeMaker
                 }
             }
 
-            board[startCol, startRow] = 0;
+            board[startRow, startCol] = 0;
 
             Queue<int> queueX = new Queue<int>();
             Queue<int> queueY = new Queue<int>();
@@ -89,16 +89,28 @@ namespace MazeMaker
             {
                 int x = queueX.Dequeue(), y = queueY.Dequeue();
 
-                for (int i = 0; i < moveCol.Length; i++)
+                for (int i = 0; i < moveRow.Length; i++)
                 {
                     int nextX = x + moveCol[i], nextY = y + moveRow[i];
 
-                    if(0 <= nextX && nextX <= width && 0 <= nextY && nextY <= height && board[nextX,nextY] == -1 && maze[nextY].Substring(nextX, 1) == ".")
+                    if(0 <= nextX && nextX < width && 0 <= nextY && nextY < height && board[nextY, nextX] == -1 && maze[nextY].Substring(nextX, 1) == ".")
                     {
                         board[nextY, nextX] = board[y, x] + 1;
 
+                        queueX.Enqueue(nextX);
+                        queueY.Enqueue(nextY);
                         // 다음꺼 준비(TODO)
                     }
+                }
+            }
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    if (maze[i].Substring(j, 1) == "." && board[i, j] == -1)
+                        return -1;
+                    max = Math.Max(max, board[i,j]);
                 }
             }
             
@@ -136,6 +148,9 @@ namespace MazeMaker
 
             // Example 2
             Console.WriteLine(longestPath(maze, startRow, startCol, moveRow, moveCol));
+
+            Console.WriteLine(longestPathSelfSolution(maze, startRow, startCol, moveRow, moveCol));
+
         }
     }
 }
