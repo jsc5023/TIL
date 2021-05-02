@@ -4,7 +4,8 @@ namespace CrazyBot
 {
     class CrazyBot
     {
-        // 우선 책을 참조해서 풀어나갑니다.(깊이우선탐색을 이해하기 편하게 하기  위해
+        // 우선 책을 참조해서 풀어나갑니다.(깊이우선탐색을 이해하기 편하게 하기  위해)
+        // 참조해야할 부분은, grid부분과 재귀함수 사용방법입니다.(나중에 다시 볼 필요가 있습니다.)
         static bool[,] grid = new bool[100, 100];
         static int[] vx = new int[4] { 1, -1, 0, 0 };
         static int[] vy = new int[4] { 0, 0, 1, -1 };

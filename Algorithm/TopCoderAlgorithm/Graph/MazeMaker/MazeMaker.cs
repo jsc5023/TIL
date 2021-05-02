@@ -99,7 +99,6 @@ namespace MazeMaker
 
                         queueX.Enqueue(nextX);
                         queueY.Enqueue(nextY);
-                        // 다음꺼 준비(TODO)
                     }
                 }
             }
