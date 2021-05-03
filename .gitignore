@@ -1,5 +1,21 @@
-// visual studio 설정파일(.csproj), Csharp 프로젝트 파일 (.csproj) 제외
+# 여기서 부턴 C#에 대한 gitignore입니다.
+# visual studio 설정파일(.csproj), Csharp 프로젝트 파일 (.csproj) 제외
 *.vs
-// bin, obj 폴더 제거
+# bin, obj 폴더 제거
 bin/
 obj/
+
+
+# 여기서부턴 java에 대한 gitignore입니다.
+.metadata/
+.settings/
+
+# Eclipse 용
+.classpath
+.project
+
+# 컴파일시 만들어지는것들
+*.class
+build/
+/bin1/
+java/build/**
