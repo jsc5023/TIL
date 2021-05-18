@@ -4,14 +4,15 @@
 java의 String substring(3,6) 시작지점, endstring 마지막지점 
 
 ```java
+Scanner scan = new Scanner(System.in);
 String a = "12345678";
-a.substring(3,6)
+System.out.println(a.substring(3,6)); // 이면 나오는 값은 456입니다.
 ```
 
-c# 의 string Substring(6,12)의 예시는
-|강의 |시작 시간|종료 시간|강의 |시작 시간|종료 시간|
-|------|-------|-------|------|-------|-------|
-|C# |08:00 |09:00|
+Java 의 string Substring(3,6)의 예시는 (3번째 index부터, 6번째 index까지)
+|0|1|2|3|4|5|6|7|
+|--|--|--|--|--|--|--|--|
+|1|2|3|4|5|6|7|8|
 
 ```cs
 Console.WriteLine("Text");
