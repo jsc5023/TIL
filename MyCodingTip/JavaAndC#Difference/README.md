@@ -10,7 +10,7 @@ System.out.println(a.substring(3,6)); // 이면 나오는 값은 456입니다.
 ```
 
 Java 의 string Substring(3,6)의 예시는 (3번째 index부터, 6번째 index까지)
-|0|1|2|<u>3</u>|<u>4</u>|<u>5</u>|6|7|
+|0|1|2|<span style="color:yellow">3</span>|<u>4</u>|<u>5</u>|6|7|
 |--|--|--|--|--|--|--|--|
 |1|2|3|<u>4</u>|<u>5</u>|<u>6</u>|7|8|
 
