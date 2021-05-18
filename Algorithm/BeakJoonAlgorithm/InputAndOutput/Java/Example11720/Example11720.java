@@ -4,16 +4,14 @@ public class Example11720 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		double n = scan.nextDouble();
+		int n = scan.nextInt();
 		
 		int sum = 0;
 		
-		int a = scan.nextInt();
-//		a = (int) (a % (Math.pow(10.0, n-1)));
+		String a = scan.next();
 		for(int i=0; i<n; i++) {
-			int b = a / (int)(Math.pow(10.0, n-1));
-			a = (int) (a % (Math.pow(10.0, n-1)));
-			sum += b;
+			sum += Integer.parseInt(a.substring(i,i+1));
+
 		}
 		
 		System.out.println(sum);
