@@ -6,8 +6,16 @@ public class Example11721 {
 		
 		String n = scan.next();
 		
-		System.out.println(n.substring(0, 10));
-		n = n.substring(10, n.length());
-		System.out.println(n);
+		while(true) {
+			if(n.length() > 10) {
+				System.out.println(n.substring(0, 10));
+			}
+			else {
+				System.out.println(n.substring(0, n.length()));
+				break;
+			}
+			
+			n = n.substring(10, n.length());
+		}
 	}
 }
