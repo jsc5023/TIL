@@ -26,3 +26,5 @@ Github TIL이라는 새로운 메모리 영역을 할당하고, 그후 메모리
 > 따라서 문자열을 수정하는 경우가 드문 경우는 String, 수정하는 경우가 빈번한 경우 StringBuffer, StringBuilder를 사용하면 됩니다.
 
 # StringBuilder vs StringBuffer
+
+StringBuilder와 String Buffer의 가장 큰 차이는 멀티스레드 기능에 있습니다.
