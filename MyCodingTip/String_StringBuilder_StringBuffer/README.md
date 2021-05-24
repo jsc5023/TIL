@@ -27,4 +27,16 @@ Github TIL이라는 새로운 메모리 영역을 할당하고, 그후 메모리
 
 # StringBuilder vs StringBuffer
 
-StringBuilder와 String Buffer의 가장 큰 차이는 멀티스레드 기능에 있습니다.
+StringBuilder와 String Buffer의 가장 큰 차이는 멀티 스레드, 동기화의 유무에 있습니다. 
+StringBuffer는 동기화 키워드를 지원하며 멀티쓰레드에서 안전하다는 점.
+StringBuilder는 동기화를 지원하지 않음, 그러나 단일쓰레드에서의 성능은 StringBuffer보다 뛰어납니다.
+(String도 멀티스레드에서 안전성을 띕니다.)
+
+간단히 정리해보면
+
+```
+String - 문자열을 추가, 삭제등 연산이 적을때 사용, 멀티스레드에서도 안전하고 빠름, 저장공간이 String Pool
+StringBuffer - 문자열을 추가, 삭제해도 괜찮음, 멀티스레드에서도 안전함, 그러나 가장 느림, 저장공간이 Heap
+StringBuilder - 문자열을 추가, 삭제등 연산이 많아도 괜찮음, 그러나 멀티스레드에서 안전하지않음, 속도는 빠름,  저장공간이 Heap
+```
+
