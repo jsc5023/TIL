@@ -1,7 +1,7 @@
 # Java와 C#의 차이
 
 1. SubString의 차이
-java의 String substring(3,6) 시작지점, endstring 마지막지점 
+   java의 String substring(3,6) 시작지점, endstring 마지막지점
 
 ```java
 Scanner scan = new Scanner(System.in);
@@ -24,3 +24,9 @@ C# 의 string Substring(3,3)의 예시는 (3번째 index부터, 문자의 길이
 |0|1|2|3(시작)|4(포함)|5(포함)|6(길이(3))|7|
 |--|--|--|--|--|--|--|--|
 |1|2|3|4(시작)|5(포함)|6(포함)|7(길이(3))|8|
+
+2. 기본적인 콘솔에서 쓰고 적는법(기억이 자주 안날때가 있어서 재작성합니다.)
+
+```java
+*import java.util.Scanner;
+```
