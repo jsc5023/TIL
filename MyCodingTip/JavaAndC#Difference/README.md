@@ -29,4 +29,17 @@ C# 의 string Substring(3,3)의 예시는 (3번째 index부터, 문자의 길이
 
 ```java
 *import java.util.Scanner;
+
+Scanner scan = new Scanner(System.in);
+int a = scan.nextInt(); // 일반적인 Console에서 쓰는 방법
+
+System.out.println(a);
+```
+
+```cs
+using System;
+
+int a = int.Parse(Console.ReadLine());
+
+Console.WriteLine(a);// 일반적인 Console에서 쓰는 방법
 ```
