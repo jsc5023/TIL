@@ -11,7 +11,13 @@ public class Example1924 {
 		// 이번엔 배열로 풀어봅시다
 		int[] monthday = {0,31,28,31,30,31,30,31,31,30,31,30 };
 		
-		int sumday = monthday[x - 1] + y;
+		int sumMonthDay = 0;
+		
+		for (int i = 0; i < x; i++) {
+			sumMonthDay += monthday[i];
+		}
+		
+		int sumday = sumMonthDay + y;
 		String outputday = "";
 		switch (sumday % 7) {
 		case 0:
