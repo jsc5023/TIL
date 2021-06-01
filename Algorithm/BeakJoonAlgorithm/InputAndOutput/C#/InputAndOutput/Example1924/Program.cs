@@ -11,7 +11,7 @@ namespace Example1924
             switch (nowDay)
             {
                 case 0:
-                    nowDayString = "SUM";
+                    nowDayString = "SUN";
                     break;
                 case 1:
                     nowDayString = "MON";
@@ -80,7 +80,7 @@ namespace Example1924
             string nowDayString = FindDayString(nowDay);
 
 
-            Console.Write(nowDayString);
+            Console.WriteLine(nowDayString);
         }
     }
 }
