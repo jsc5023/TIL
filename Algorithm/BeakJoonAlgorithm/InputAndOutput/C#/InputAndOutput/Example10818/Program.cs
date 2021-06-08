@@ -13,9 +13,18 @@ namespace Example10818
 
             for (int i = 0; i < n; i++)
             {
-                Console.ReadLine();
+                int a = int.Parse(Console.ReadLine());
+                if(max < a)
+                {
+                    max = a;
+                }
+
+                if(min > a)
+                {
+                    min = a;
+                }
             }
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(max);
         }
     }
 }
