@@ -11,22 +11,20 @@ namespace Example10818
             int max = 0;
             int min = 1000001;
 
-            string[] innumber = Console.ReadLine().Split(' '); // 공백
+            string[] inputString = Console.ReadLine().Split(' '); // 공백
+            int[] inputInt = new int[n];
 
             for (int i = 0; i < n; i++)
             {
-                int a = int.Parse(Console.ReadLine());
-                if(max < a)
-                {
-                    max = a;
-                }
+                inputInt[i] = int.Parse(inputString[i]);
 
-                if(min > a)
-                {
-                    min = a;
-                }
+                if (inputInt[i] > max)
+                    max = inputInt[i];
+
+                if (inputInt[i] < min)
+                    min = inputInt[i];
             }
-            Console.WriteLine(max);
+            Console.WriteLine(min + " " + max);
         }
     }
 }
