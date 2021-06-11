@@ -8,7 +8,7 @@ namespace Example10818
         {
             int n = int.Parse(Console.ReadLine());
 
-            int max = 0;
+            int max = -1000001;
             int min = 1000001;
 
             string[] inputString = Console.ReadLine().Split(' '); // 공백
