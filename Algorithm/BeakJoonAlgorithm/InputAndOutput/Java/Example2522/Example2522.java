@@ -11,7 +11,20 @@ public class Example2522 {
 				System.out.print(" ");
 			}
 			
-			for (int j = i; j < n; j++) {
+			for (int j = 0; j < i + 1; j++) {
+				System.out.print("*");
+			}
+			
+			System.out.print("\n");
+		}
+		
+		for (int i = 0; i < n - 1; i++) {
+			
+			for (int j = 0; j <= i; j++) {
+				System.out.print(" ");
+			}
+			
+			for (int j = i; j < n - 1; j++) {
 				System.out.print("*");
 			}
 			
