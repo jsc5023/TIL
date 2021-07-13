@@ -9,28 +9,21 @@ namespace Example1463
             // 문제 풀이 방법 - 작은문제를 먼저 풀고, 그후 순차적으로 수행해 나간다.
 
             int X = int.Parse(Console.ReadLine());
-            int[] dp = { 0, };
+            int[] dp = new int[X + 1];
 
-            while(X != 1)
+            dp[0] = dp[1] = 0;
+            for (int i = 2; i <= X; i++)
             {
-                if (X % 3 == 0)
-                {
-                    X = X / 3;
-                    count += 1;
-                }  
-                else if (X % 2 == 0)
-                {
-                    X = X / 2;
-                    count += 1;
-                }
-                else
-                {
-                    X = X - 1;
-                    count += 1;
-                } 
+                dp[i] = dp[i - 1] + 1;
+                if (i % 2 == 0)
+                    dp[i] = Math.Min(dp[i], dp[i / 2] + 1);
+                if (i % 3 == 0)
+                    dp[i] = Math.Min(dp[i], dp[i / 3] + 1);
             }
 
-            Console.Write(count);
+            
+
+            Console.Write(dp[X]);
         }
     }
 }
