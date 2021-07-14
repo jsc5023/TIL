@@ -24,9 +24,6 @@ namespace Example1463
                 if (i % 3 == 0)
                     dp[i] = Math.Min(dp[i], dp[i / 3] + 1);
             }
-
-            
-
             Console.Write(dp[X]);
         }
     }
