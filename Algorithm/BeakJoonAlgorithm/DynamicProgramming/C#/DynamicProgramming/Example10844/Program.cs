@@ -7,10 +7,13 @@ namespace Example10844
         static void Main(string[] args)
         {
             int N = int.Parse(Console.ReadLine());
-            int[] dp = new int[N + 3];
+            int[][] dp = new int[N + 3][];
 
-            dp[1] = 9; dp[2] = 17;
+            //dp[1] = 9; dp[2] = 17;
+            for (int i = 0; i < n; i++)
+            {
 
+            }
 
 
         }
