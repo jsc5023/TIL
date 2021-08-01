@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Console 예제</title>
+	</head>
+	<script>
+		console.log('aa' + '	  console.log(\'aa\') 입니다.'); // 콘솔로그 출력
+		console.warn('노란색 경고창' + '  console.log(\'노란색 경고창\') 입니다.'); // 경고창
+		console.error('빨간색 에러창' + '  console.log(\'빨간색 경고창\') 입니다.'); // 에러창
+		
+		let exampleJson = {"a": "a", "b" : {"c": "c"}};
+		
+		console.table(exampleJson); // 테이블 형식으로 나타남
+
+		document.addEventListener("DOMContentLoaded", function(){ // html 내용이 로드 된 이후 실행(Jqery의 $( document ).ready() 와 같음
+			console.log(document.body);
+			console.dir(document.body);			
+		});
+		
+	</script>
+	<body>
+		<h1>콘솔 테스트용 html 입니다.</h1>
+	</body>
+</html>

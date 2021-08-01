@@ -9,6 +9,3 @@ console.error() -> 빨간색 경고창이 나옵니다.(좀더 주의하기 좋�
 console.Table() -> 테이블형식으로 콘솔이 나타납니다.
 console.dir() -> 콘솔을 Json 형식으로 나타냅니다.(Console.log는 HTML형식으로 나타납니다.)
 따라서 console.dir은 Json이 아닐시 JSON.stringify으로서 Json형식으로 변경하는게 좋습니다.
-그리고 Console의 특징 중 하나로 depth라는 특징이 존재합니다.
-예를들어서
-var exampleJson = {"a": "a", "b" : {"c": "c"}}라고 가정했을때 console.log(exampleJson. {depth: 1})이라고 가정했을때 값은 "c":"c"는 depth가 2가 되므로 나타나지 않고 나머지 값만 나타나게 됩니다.
