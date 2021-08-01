@@ -9,3 +9,5 @@ console.error() -> 빨간색 경고창이 나옵니다.(좀더 주의하기 좋�
 console.Table() -> 테이블형식으로 콘솔이 나타납니다.
 console.dir() -> 콘솔을 Json 형식으로 나타냅니다.(Console.log는 HTML형식으로 나타납니다.)
 따라서 console.dir은 Json이 아닐시 JSON.stringify으로서 Json형식으로 변경하는게 좋습니다.
+
+![image](https://user-images.githubusercontent.com/60413291/127771755-0d7ffa73-109c-40df-b1ec-9e9dcdc5093b.png)
