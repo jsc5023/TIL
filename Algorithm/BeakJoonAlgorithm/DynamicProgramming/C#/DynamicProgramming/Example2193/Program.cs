@@ -6,13 +6,18 @@ namespace Example2193
     {
         static void Main(string[] args)
         {
-            // 0으로 시작하지 않습니다.
-            // 1이 연속으로 나타나지않는다.
-
             int N = int.Parse(Console.ReadLine());
 
-            int[] dp = new int[N+1];
+            long[] dp = new long[N+2];
 
+            dp[0] = dp[1] = 1;
+
+            for (int i = 2; i < N; i++)
+            {
+                dp[i] = dp[i - 1] + dp[i - 2];  
+            }
+
+            Console.Write(dp[N-1]);
         }
     }
 }
