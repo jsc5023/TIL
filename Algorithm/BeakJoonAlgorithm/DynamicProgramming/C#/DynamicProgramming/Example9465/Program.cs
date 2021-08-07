@@ -19,6 +19,7 @@ namespace Example9465
                         dp[j,k] = int.Parse(Console.ReadLine());
                     }
                 }
+                Console.Write(dp[2, n]);
             }
         }
     }
