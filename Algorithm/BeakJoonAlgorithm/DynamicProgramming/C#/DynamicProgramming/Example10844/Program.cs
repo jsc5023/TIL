@@ -6,10 +6,10 @@ namespace Example10844
     {
         static void Main(string[] args)
         {
-            int[,] dp = new int[101,10];
+            int[,] dp = new int[101,10]; // [자리수, 10진수 수]
             int sum = 0;
 
-            int N = int.Parse(Console.ReadLine());
+            int N = int.Parse(Console.ReadLine()); // 자리수
             for (int i = 0; i< 10; i++)
 	            dp[1,i] = 1;
 
