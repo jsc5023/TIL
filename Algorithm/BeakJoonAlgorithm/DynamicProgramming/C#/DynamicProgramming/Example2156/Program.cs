@@ -26,12 +26,14 @@ namespace Example2156
             }
             else
             {
-                //dp[0] = dt[0];
-                //dp[1] = dt[0] + dt[1];
-                //for (int i = 2; i < n; i++)
-                //{
-                //    dp[i] = dp[i-1]
-                //}
+                dp[0] = dt[0];
+                dp[1] = dt[0] + dt[1];
+                for (int i = 2; i <= n; i++)
+                {
+                    dp[i] = dp[i - 2] + dt[i-1] + dt[i];
+                    dp[i] = Math.Max(dp[i], (dp[i - 1] + dt[i]));
+                    dp[i] = Math.Max(dp[i], (dp[i - 2] + dt[i - 1]));
+                }
             }
 
             Console.Write(dp[n]);
