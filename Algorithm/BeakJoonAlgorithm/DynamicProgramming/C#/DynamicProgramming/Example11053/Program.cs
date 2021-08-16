@@ -17,8 +17,10 @@ namespace Example11053
             int[] dp = new int[n + 1];
             for (int i = 0; i <= n; i++)
             {
-                
+                dp[i] = Math.Max(dp[i], dp[i] + 1);
             }
+
+            Console.Write(dp[n]);
         }
     }
 }
