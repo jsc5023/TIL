@@ -18,18 +18,24 @@ namespace Example11053
                 dt[i] = int.Parse(firstRowString[i]);
             }
 
-            ArrayList dp = new ArrayList();
+            int[] dp = new int[n + 1];
 
-            dp.Add(dt[0]);
-            for (int i = 1; i <= n; i++)
+            for (int i = 0; i <= n; i++)
             {
-                if((int)dp[dp.Count-1] <= dt[i])
+                dp[i] = 1;
+                for (int j = 0; j < i; j++)
                 {
-                    dp.Add(dt[i]);
+                    if (dt[j] < dt[i] && dp[j] + 1 > dp[i])
+                        dp[i] = dp[j] + 1;
                 }
             }
 
-            Console.Write(dp.Count);
+            int max = 0;
+            for (int i = 0; i < n; i++)
+            {
+                max = Math.Max(dp[i], max);
+            }
+            Console.Write(max);
         }
     }
 }
