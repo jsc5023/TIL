@@ -17,10 +17,9 @@ namespace Example11054
             int[] dpIncrease = new int[n + 1]; // 왼쪽에서 시작, 점점 증가하는 dp
             int[] dpDecrease = new int[n + 1];
 
-            dpIncrease[0] = 1;
-            for (int i = 1; i < n; i++){
+            for (int i = 0; i < n; i++){
                 dpIncrease[i] = 1;
-                for (int j = 0; j < i; j++)
+                for (int j = 0; j < n; j++)
                 {
                     if (dt[j] < dt[i] && dpIncrease[j] + 1 > dpIncrease[i])
                     {
@@ -29,8 +28,7 @@ namespace Example11054
                 }
             }
 
-            dpIncrease[n - 1] = 1;
-            for (int i = n - 2; i >= 0; i--)
+            for (int i = n - 1; i >= 0; i--)
             {
                 dpDecrease[i] = 1;
                 for (int j = n-1; j > i; j--)
@@ -42,10 +40,11 @@ namespace Example11054
                 }
             }
 
-            int maxLength = 0;
+            int maxLength = dpIncrease[0] + dpDecrease[0] - 1; // -1이 핵심
+
             for (int i = 0; i < n; i++)
             {
-                maxLength = Math.Max(dpIncrease[i] + dpDecrease[i], maxLength);
+                maxLength = Math.Max(dpIncrease[i] + dpDecrease[i] - 1, maxLength);
             }
 
             Console.Write(maxLength);
