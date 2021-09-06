@@ -18,17 +18,18 @@ namespace Example10989
             StringBuilder sb = new StringBuilder();
             for (int i = 1; i < 10001; i++)
             {
-                if(i % 100 == 0)
+                if(i > 100)
                 {
                     Console.Write(sb);
                     sb = new StringBuilder();
                 }
                 while (arr[i] > 0)
                 {
-                    sb.Append(i).Append("\n");
+                    sb.AppendLine(i.ToString());
                     arr[i]--;
                 }
             }
+            
         }
     }
 }
