@@ -67,7 +67,7 @@ namespace Example10816
             while (lo < hi)
             {
 
-                int mid = (lo + hi) / 2;.
+                int mid = (lo + hi) / 2;
 
                 if (key < arr[mid])
                 {
