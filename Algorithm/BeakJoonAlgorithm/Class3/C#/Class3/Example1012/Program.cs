@@ -9,7 +9,7 @@ namespace Example1012
         static int[] dx = { -1, 0, 1, 0 }; 
         static int[] dy = { 0, 1, 0, -1 };
 
-        // dx dy 합쳐서 좌 상 우 하 순서
+        // dx dy 합쳐서 좌 하 우 상 순서
         static int[,] visited;
         static int[,] arr;
 
