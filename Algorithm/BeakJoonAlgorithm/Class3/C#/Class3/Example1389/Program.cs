@@ -34,28 +34,77 @@ namespace Example1389
                 Array.Fill(visit, false);
                 bfs(i);
             }
-            Console.Write(nowCnt[1]);
+
+            int min = int.MaxValue;
+
+            for (int i = 1; i <= N; i++)
+            {
+                if (nowCnt[i] < min)
+                {
+                    min = nowCnt[i];
+                }
+            }
+
+            for (int i = 1; i <= N; i++)
+            {
+                if (nowCnt[i] == min)
+                {
+                    Console.Write(i);
+                    break;
+                }
+            }
         }
 
         private static void bfs(int v)
         {
-            Queue<int> queue = new Queue<int>();
+            Queue<Node> queue = new Queue<Node>();
 
-            queue.Enqueue(v);
+            queue.Enqueue(new Node(v, 0));
             if (visit[v] == false)
                 visit[v] = true;
             else
                 return;
 
-            for (int i = 1; i <= N; i++)
+            while(queue.Count > 0)
             {
-                if (visit[i] == false && arr[v, i] == 1)
+                int x = queue.Peek().X;
+                int dist = queue.Dequeue().Dist;
+
+                for (int i = 1; i <= N; i++)
                 {
-                    queue.Enqueue(i);
-                    visit[i] = true;
-                    nowCnt[v]++;
+                    if (visit[i] == false && arr[x, i] == 1)
+                    {
+                        queue.Enqueue(new Node(i, dist+1));
+                        visit[i] = true;
+                        nowCnt[v] += dist + 1;
+                    }
                 }
             }
         }
     }
+
+    class Node
+    {
+        int x;
+        int dist;
+
+        public int X
+        {
+            get { return x; }
+            set { x = value; }
+        }
+
+        public int Dist
+        {
+            get { return dist; }
+            set { dist = value; }
+        }
+
+        public Node(int _x, int d)
+        {
+            x = _x;
+            dist = d;
+        }
+    }
+
 }
