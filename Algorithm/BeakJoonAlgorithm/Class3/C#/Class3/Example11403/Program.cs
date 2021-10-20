@@ -26,10 +26,13 @@ namespace Example11403
                 }
             }
 
+            // k = 거쳐가는 노드
             for (int k = 0; k < N; k++)
             {
+                // i = 출발 노드
                 for (int i = 0; i < N; i++)
                 {
+                    // j = 도착 노드
                     for (int j = 0; j < N; j++)
                     {
                         if (map[i, k] == 1 && map[k, j] == 1)
