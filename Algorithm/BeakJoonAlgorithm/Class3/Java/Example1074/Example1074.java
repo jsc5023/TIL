@@ -27,21 +27,26 @@ public class Example1074 {
 		
 		if (pow == 1)
             return;
-		
+		 
+		// 4분면 자르기
+		// 1사분면
 		 if (r < pow / 2 && c < pow / 2)
          {
              find(pow / 2, r, c);
          }
+		 //2사분면
          else if (r < pow / 2 && c >= pow / 2)
          {
              cnt += pow * pow / 4;
              find(pow / 2, r, c - pow / 2);
          }
+		 // 3사분면
          else if (r >= pow / 2 && c < pow / 2)
          {
              cnt += (pow * pow / 4) * 2;
              find(pow / 2, r - pow / 2, c);
          }
+		 // 4사분면
          else
          {
              cnt += (pow * pow / 4) * 3;
