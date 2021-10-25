@@ -18,7 +18,7 @@ namespace Example9019
                 int a = int.Parse(s[0]);
                 int b = int.Parse(s[1]);
 
-                string[] command = new String[10000];
+                string[] command = new string[10000];
                 bool[] visited = new bool[10000];
                 Queue<int> queue = new Queue<int>();
 
@@ -33,7 +33,7 @@ namespace Example9019
 
                     int D = (2 * now) % 10000; // D연산
                     int S = (now == 0) ? 9999 : now - 1; // S연산
-                    int L = (now % 1000) * 10 + now / 1000; // L연산
+                    int L = (now % 1000) * 10 + now / 1000;
                     int R = (now % 10) * 1000 + now / 10; // R연산
 
                     if (!visited[D])
