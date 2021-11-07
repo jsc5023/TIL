@@ -46,11 +46,11 @@ namespace Example1149
                 }
                 else if (color == green)
                 {
-                    arr[N, green] = Math.Min(cost_Color(N - 1, green), cost_Color(N - 1, blue)) + cost[N, green];
+                    arr[N, green] = Math.Min(cost_Color(N - 1, red), cost_Color(N - 1, blue)) + cost[N, green];
                 }
                 else
                 {
-                    arr[N, blue] = Math.Min(cost_Color(N - 1, red), cost_Color(N - 1, blue)) + cost[N, blue];
+                    arr[N, blue] = Math.Min(cost_Color(N - 1, red), cost_Color(N - 1, green)) + cost[N, blue];
                 }
 
             }
