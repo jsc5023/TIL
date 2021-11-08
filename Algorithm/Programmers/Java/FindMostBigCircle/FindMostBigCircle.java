@@ -6,8 +6,6 @@ import java.util.Iterator;
 public class FindMostBigCircle {
 	public static int[][] arr; 
 	public static StringBuilder sb;
-	public static int[] dy = {-1, 1, 0, 0}; // го, ©Л, аб
-	public static int[] dx = {0, 0, 1, -1};
 	public static int maxLength = 0;
 	public static int max = 0;
 	public static int cnt = 0;
@@ -34,22 +32,26 @@ public class FindMostBigCircle {
 			}
 		}
 		
-		sb = new StringBuilder();
+		max = solution(arr);
 		
-		for (int i = 0; i < maxLength; i++) {
-			for (int j = 0; j < maxLength; j++) {
-				if(i - 1 < 0 || j - 1 < 0 || i + 1 > maxLength || j + 1 > maxLength) {
-					continue;
-				}
-				else if(arr[i][j] == 1) {
-					arr[i][j] = 1 + Math.max(arr[i + dy[0]][j + dx[0]], arr[i + dy[1]][j + dx[1]]);
-					arr[i][j] = Math.max(arr[i][j], arr[i + dy[2]][j + dx[2]]);
-					arr[i][j] = Math.max(arr[i][j], arr[i + dy[3]][j + dx[3]]);
-					max = Math.max(arr[i][j], max);
+		System.out.print(max);
+	}
+	
+	public static int solution(int[][] board) {
+		
+		int max = 1;
+		for (int i = 1; i < board.length; i++) {
+			for (int j = 1; j < board[i].length; j++) {
+				if(board[i][j] == 1) {
+					int min = Integer.MAX_VALUE;
+					min = Math.min(board[i - 1][j - 1], board[i - 1][j]);
+					min = Math.min(min, board[i][j - 1]);
+					board[i][j] = 1 + min;
+					max = Math.max(board[i][j], max);
 				}
 			}
 		}
 		
-		System.out.print(max * max);
+		return max * max;
 	}
 }
