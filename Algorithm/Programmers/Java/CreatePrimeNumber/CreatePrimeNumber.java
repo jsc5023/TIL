@@ -16,19 +16,20 @@ public class CreatePrimeNumber {
 	    	sum += nums[i];
 		}
         
-	    int[] dp = new int[50001];
+	    int[] dp = new int[sum + 1];
 	    
-       for (int i = 0; i <= Math.sqrt(sum); i++) {
+       for (int i = 2; i <= sum; i++) {
     	   if(dp[i] == 0){
-				for(int j = i*i; j<= (int)Math.sqrt(sum); j+=i) dp[i] = 1;
+				for(int j = i * i; j<= sum; j+=i) 
+					dp[j] = 1;
 			}
        }
        
        int cnt = 0;
        for (int i = 0; i < nums.length; i++) {
     	   for (int j = i+1; j < nums.length; j++) {
-    		   for (int k = j + 1; k < dp.length; k++) {
-    			   if(dp[nums[i]+nums[j]+nums[k]] == 1) {
+    		   for (int k = j + 1; k < nums.length; k++) {
+    			   if(dp[nums[i]+nums[j]+nums[k]] == 0) {
     				   cnt++;
     			   }
 			   }
