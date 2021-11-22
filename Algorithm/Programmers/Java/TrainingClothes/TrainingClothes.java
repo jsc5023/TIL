@@ -35,7 +35,7 @@ public class TrainingClothes {
         	if(reserve[i] - 1 > 0 && arr[reserve[i] - 1] == false) {
 				arr[reserve[i] - 1] = true;
 			}
-			else if(arr[reserve[i] + 1] == false && reserve[i] + 1 <= n) {
+			else if(arr[reserve[i] + 1] == false && reserve[i] + 1 <= n && reserve[i] != 0) {
 				arr[reserve[i] + 1] = true;
 			}
 		}
