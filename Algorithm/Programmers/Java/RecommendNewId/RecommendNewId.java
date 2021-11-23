@@ -37,8 +37,8 @@ public class RecommendNewId {
             }
         }
         
-        if(condition[1] == "") {
-        	condition[1] += "a";
+        if(condition[1].isEmpty()) {
+        	condition[1] = "a";
         }
         
         if(condition[1].length() >= 16) {
@@ -54,8 +54,13 @@ public class RecommendNewId {
         
         if(condition[1].length() <= 2) {
         	while(condition[1].length() < 3) {
-        		char a = condition[1].charAt(condition[1].length() + 1);
-        		condition[1] += a;
+        		try {
+        			char a = condition[1].charAt(condition[1].length() - 1);
+            		condition[1] += a;
+				}
+        		catch (Exception e) {
+        			break;
+        		}
         	}
         }
         
