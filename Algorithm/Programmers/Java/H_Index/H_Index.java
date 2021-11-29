@@ -13,13 +13,14 @@ public class H_Index {
         
         Arrays.sort(citations);
         
-        int cnt = -1;
         for (int i = 0; i < citations.length; i++) {
- 			if(citations[i] == 1) {
-				
-			}
-
-		}
+            int h = citations.length - i;
+            
+            if(citations[i] >= h) {
+            	answer = h;
+            	break;
+            }
+        }
         
         return answer;
     }
