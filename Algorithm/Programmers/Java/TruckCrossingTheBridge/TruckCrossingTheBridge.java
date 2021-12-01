@@ -1,4 +1,5 @@
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class TruckCrossingTheBridge {
 
@@ -13,38 +14,38 @@ public class TruckCrossingTheBridge {
 	}
 
 	public static int solution(int bridge_length, int weight, int[] truck_weights) {
-        int answer = 0;
-        
-        Stack<Integer> bridgeIn = new Stack<>();
-        Stack<Integer> bridgeOut = new Stack<>();
-        
-        int cnt = 0;
-        int index = 0;
-        int[] passcnt = new int[truck_weights.length];
-        while(bridgeOut.size() < truck_weights.length) {
-        	
-        	int nowTruckBridgeIn = 0;
-        	
-        	if(!bridgeIn.isEmpty() && ) {
-        		bridgeOut.add(bridgeIn.get(0));
-        		bridge
-        	}
-        		
-        	for (int i = 0; i < bridgeIn.size(); i++) {
-        		nowTruckBridgeIn += bridgeIn.get(i);
+        Queue<Integer> queue = new LinkedList<>();
+		int sum = 0;
+		int time = 0; 
+
+		for(int i = 0; i < truck_weights.length; i++) {
+			int truck = truck_weights[i];
+
+			while(true) {
+				if(queue.isEmpty()) {
+					queue.add(truck);
+					sum += truck;
+					time++;
+					break;
+				}
+				else if(queue.size() == bridge_length) {
+					sum -= queue.poll();
+				}
+				else {
+					if(sum + truck <= weight) {
+						queue.add(truck);
+						sum += truck;
+						time++;
+						break;
+					}
+					else {
+						queue.add(0);
+						time++;
+					}
+				}
 			}
-        	
-        	if(nowTruckBridgeIn+truck_weights[index] <= weight) {
-        		bridgeIn.add(truck_weights[index]);
-        	}
-        	
-        	
-        	
-        	
-        	cnt++;
-        	pass++;
-        }
-        
-        return answer;
+		}
+
+		return time + bridge_length; 
     }
 }
