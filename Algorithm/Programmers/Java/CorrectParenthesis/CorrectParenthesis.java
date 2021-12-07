@@ -9,8 +9,6 @@ public class CorrectParenthesis {
 	}
 	
 	static boolean solution(String s) {
-        boolean answer = true;
-
         Stack<Character> stack = new Stack<>();
         
         char[] getchar = s.toCharArray();
