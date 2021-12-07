@@ -10,14 +10,14 @@ public class Lifeboat {
 	}
 	
 	 public static int solution(int[] people, int limit) {
-        int answer = 1;
+        int answer = 0;
         
         Arrays.sort(people);
         
         int min = 0;
         
         for (int max = people.length - 1; min <= max; max--){
-          if (people[min] + people[max] <= limit)
+          if (people[min] + people[max] <= limit) // 가장 큰값, 가장작은값 뺏을 경우 구하도록 변경합니다.
         	  min++;
           answer++;
         }
