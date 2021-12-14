@@ -8,20 +8,35 @@ public class TriangularSnail {
 	}
 
 	public static int[] solution(int n) {
-        int[] answer = {};
-        
-        int sum = 0;
-        for (int i = 1; i <= n; i++) {
-        	sum += n;
-		}
-        
-        int[] dp = new int[sum];
-        
+        int[] dp = new int[n*(n+1) / 2];
+        int[][] arr = new int[n][n];
         // ÂüÁ¶
-        for (int i = 0; i < sum; i++) {
-			
+        int x = -1, y = 0;
+        int num = 1;
+        
+        for (int i = 0; i < n; i++) {
+			for (int j = i; j < n; j++) {
+				if(i % 3 == 0) // if(x == 0) 
+					x++;
+				else if(i % 3 == 1)
+					y++;
+				else if(i % 3 == 2) {
+					x--;
+					y--;
+				}
+				arr[x][y] = num++;
+			}
 		}
         
-        return answer;
+        int k = 0;
+        for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if(arr[i][j] == 0)
+					break;
+				dp[k++] = arr[i][j];
+			}
+		}
+        
+        return dp;
     }
 }
