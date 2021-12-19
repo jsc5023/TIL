@@ -11,6 +11,15 @@ public class QuadCompressionCount {
 		solution(arr);
 	}
 	
+	public void quad(int n, int y, int x, int[][] arr) {
+		
+		
+	}
+	
+	public boolean isBlock(int n, int y, int x, int[][] arr) {
+		
+	}
+	
 	public static int[] solution(int[][] arr) {
         int[] answer = {};
         // 풀이방법
