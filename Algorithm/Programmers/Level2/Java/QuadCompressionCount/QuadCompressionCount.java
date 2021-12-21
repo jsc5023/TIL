@@ -1,8 +1,7 @@
 
 public class QuadCompressionCount {
 
-	static int[] dx = {-1, 0, 0, 1};
-	static int[] dy = {0, -1, 1, 0};
+	static int[] answer;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,7 +10,14 @@ public class QuadCompressionCount {
 		solution(arr);
 	}
 	
-	public void quad(int n, int y, int x, int[][] arr) {
+	public static int[] solution(int[][] arr) {
+		answer = new int[2];
+		
+		quad(arr.length, 0, 0, arr);
+        return answer;
+    }
+	
+	public static void quad(int n, int y, int x, int[][] arr) {
 		
 		if(n == 1) {
 			answer[arr[y][x]]++;
@@ -26,7 +32,7 @@ public class QuadCompressionCount {
 		quad(n/2, y + n/2, x + n/2, arr);
 	}
 	
-	public boolean isBlock(int n, int y, int x, int[][] arr) {
+	public static boolean isBlock(int n, int y, int x, int[][] arr) {
 		
 		for (int i = y; i < y + n; i++) {
 			for (int j = x; j < x + n; j++) {
@@ -39,13 +45,6 @@ public class QuadCompressionCount {
 		
 	}
 	
-	public static int[] solution(int[][] arr) {
-        int[] answer = {};
-        // 풀이방법
-        // 상하좌우 4단계 모두를 비교해서 풀어나가자.
-        
-        
-        return answer;
-    }
+	
 
 }
