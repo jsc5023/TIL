@@ -14,6 +14,7 @@ public class PowerGrid {
 
 	public static int solution(int n, int[][] wires) {
         int answer = -1;
+        // 이문제는 한번씩 다시풀어보는데 햇갈림, 3일동안 풀어봐야됨, 내일 다시 안보고 풀어보기
         // 완전탐색으로 문제풀기
         int val1=0;
         int val2=0;
@@ -28,6 +29,7 @@ public class PowerGrid {
 	
 	public static int relationCnt (int idx, int[][] wires){
         
+		// BFS 탐색
         Queue<Integer> que = new LinkedList<>();
         List<int[]> list = new ArrayList<>();
         for(int[] data:wires){
