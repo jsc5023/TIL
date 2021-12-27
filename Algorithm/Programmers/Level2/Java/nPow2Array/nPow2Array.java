@@ -13,27 +13,13 @@ public class nPow2Array {
 		
 		int answerLength = (int)(right - left) + 1;
         int[] answer = new int[answerLength];
-        
-        int[][] arr = new int[n][n];
-        
-        for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j <= i; j++) {
-				arr[i][j] = i + 1;
-				arr[j][i] = i + 1;
-			}
+
+        int idx = 0;
+        for (long i = left; i <= right; i++) {
+        	// i / n을 말하는 거는 행
+        	// i % n은 열의 최대값 + 1
+        	answer[idx++] = (int)Math.max(i/n, i%n) + 1;
 		}
-        
-        long idx = -1;
-        int arrIdx = 0;
-        for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j < arr.length; j++) {
-				idx++;
-				if((idx >= left) && (right >= idx)) {
-					answer[arrIdx++] = arr[i][j];
-				}
-			}
-		}
-        
         
         return answer;
     }
