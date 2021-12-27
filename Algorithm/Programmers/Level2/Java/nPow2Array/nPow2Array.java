@@ -17,26 +17,21 @@ public class nPow2Array {
         int[][] arr = new int[n][n];
         
         for (int i = 0; i < arr.length; i++) {
-        	
 			for (int j = 0; j <= i; j++) {
 				arr[i][j] = i + 1;
 				arr[j][i] = i + 1;
 			}
-			
 		}
         
-        long idx = 0;
-        
-        HashMap<Long, Integer> hm = new HashMap<>();
+        long idx = -1;
+        int arrIdx = 0;
         for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr.length; j++) {
-				hm.put(idx++, arr[i][j]);
+				idx++;
+				if((idx >= left) && (right >= idx)) {
+					answer[arrIdx++] = arr[i][j];
+				}
 			}
-		}
-
-        int arrIdx = 0;
-        for (long i = left; i <= right; i++) {
-        	answer[arrIdx++] = hm.get(i);
 		}
         
         
