@@ -21,15 +21,18 @@ public class IntersectionStars {
 			}
         	
 		}
+        
+        // 이제 어떻게 ...을 만들것인지 고민
+        String[] str = new String[];
         return answer;
     }
 	
 	public static void IntersectionPoint(int a, int b, int e, int c, int d, int f) {
 		
-		int deno = a*d - b*c;
+		double deno = a*d - b*c;
 		
-		int numerator_x = b*f - e*d;
-		int numerator_y = e*c - a*f;
+		double numerator_x = b*f - e*d;
+		double numerator_y = e*c - a*f;
 		
 		double ans_x = numerator_x / deno;
 		double ans_y = numerator_y / deno;
