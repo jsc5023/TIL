@@ -9,11 +9,30 @@ public class Joystick {
 	}
 	
 	 public static int solution(String name) {
-        int answer = 0;
-        
-        // 풀이방법 재생각
-        
-        return answer;
+		 int answer = 0;
+		 int len = name.length();
+		 
+		 int min = len - 1;
+		 
+		 for (int i = 0; i < len; i++) {
+			
+			// 조이스틱 상, 하 이동
+			char nowChar = name.charAt(i);
+			int mov = (nowChar - 'A' < 'Z' - nowChar + 1) ? (nowChar - 'A') : ('Z' - nowChar + 1);
+			answer += mov;
+			
+			// 조이스틱 좌우이동
+			int nextIndex = i + 1;
+			while(nextIndex < len && name.charAt(nextIndex) == 'A') {
+				nextIndex++;
+			}
+			
+			min = Math.min(min, (i*2) + len - nextIndex);
+			
+		}
+		 
+		answer += min;
+		return answer;
     }
 
 }
