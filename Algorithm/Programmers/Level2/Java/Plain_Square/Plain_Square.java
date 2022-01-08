@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 
 public class Plain_Square {
 
@@ -10,15 +11,8 @@ public class Plain_Square {
 	}
 
 	public static long solution(int w, int h) {
-        long answer = 1;
         // 어떤식으로 자를 수 있을지 고민해보기
-        
-        // 패턴을 잘모르겠음, 좀더 고민해보기
-        // 적어가면서 풀기
-        
-        long notCuttingSquare = w * h;
-        
-        
-        return answer;
+        int gcd = BigInteger.valueOf(w).gcd(BigInteger.valueOf(h)).intValue();
+        return ((long) w * (long) h) - ((((long) w / gcd) + ((long) h / gcd) - 1) * gcd);
     }
 }
