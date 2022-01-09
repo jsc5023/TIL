@@ -11,8 +11,23 @@ public class Plain_Square {
 	}
 
 	public static long solution(int w, int h) {
-        // 어떤식으로 자를 수 있을지 고민해보기
-        int gcd = BigInteger.valueOf(w).gcd(BigInteger.valueOf(h)).intValue();
-        return ((long) w * (long) h) - ((((long) w / gcd) + ((long) h / gcd) - 1) * gcd);
+		long answer = w * h;
+        long gcd_v = gcd(w,h);
+        answer = answer - (gcd_v * ((w/gcd_v) + (h/gcd_v) -1));
+        
+        return answer;
     }
+	
+	public static long gcd(long a, long b) {
+		long val_1 = a > b ? a: b;
+		long val_2 = a > b ? b: a;
+		
+		while(val_2 != 0) {
+			long r = val_1 % val_2;
+			val_1 = val_2;
+			val_2 = r;
+		}
+		return val_1;
+	}
+	 
 }
