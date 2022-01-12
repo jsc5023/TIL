@@ -1,11 +1,10 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Stack;
 
 public class Parenthesis_Rotation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "[](){}";
+		String s = "}]()[{";
 		System.out.print(solution(s));
 	}
 
@@ -23,18 +22,30 @@ public class Parenthesis_Rotation {
 	
 	public static boolean isCorrectParenthesis(String nowStr) {
 		
-		Set<Character> hs = new HashSet<>();
+		Stack<Character> stack = new Stack<>();
 		char[] charArr = nowStr.toCharArray();
 		for (int i = 0; i < charArr.length; i++) {
-			if(charArr[i] == '[')
-				hs.add('[');
-			if(charArr[i] == '(')
-				hs.add('(');
-			if(charArr[i] == '{')
-				hs.add('{');
+			char nowChar = charArr[i];
+			if(nowChar == '[' || nowChar == '(' || nowChar == '{')
+				stack.push(nowChar);
+			else {
+				if(stack.isEmpty())
+					return false;
+				else
+				{
+					if(nowChar == ')' && stack.peek() == '('){
+	                    stack.pop();
+	                }else if(nowChar == '}' && stack.peek() == '{'){
+	                	stack.pop();
+	                }else if(nowChar == ']' && stack.peek() == '['){
+	                	stack.pop();
+	                }
+				}
+			}
 		}
-		if(nowStr.)
 		
+		if(!stack.isEmpty())
+			return false;
 		return true;
 	}
 }
