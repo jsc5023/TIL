@@ -1,3 +1,4 @@
+import java.util.Stack;
 
 public class Pair_To_Remove {
 
@@ -9,38 +10,19 @@ public class Pair_To_Remove {
 	
 	public static int solution(String s)
     {
-        int answer = 1;
-
-        String nowString = s;
-        while(nowString.length() > 0) {
-        	
-        	String resultString = removeString(nowString);
-        	
-        	if(resultString.equals(nowString)) {
-        		answer=0;
-        		break;
-        	}
-        	else {
-        		nowString = resultString; 
-        	}
-        }
-        
-        return answer;
-    }
-	
-	public static String removeString(String nowString) {
+		// 재풀이, 스택으로 푸는문제, 스택이 아니면, 성능이안나옴
+		Stack<Character> stack = new Stack<>();
 		
-		StringBuilder sb = new StringBuilder();
-		sb.append(nowString);
-		for (int i = 0; i < sb.length() - 1; i++) {
-			if(sb.charAt(i) == sb.charAt(i + 1)) {
-				sb.deleteCharAt(i);
-				sb.deleteCharAt(i);
-				break;
-			}
+		for (int i = 0; i < s.length(); i++) {
+			char nowChar = s.charAt(i);
+			
+			if(!stack.isEmpty() && stack.peek() == nowChar)
+				stack.pop();
+			else
+				stack.push(nowChar);
 		}
 		
-		return sb.toString();
-	}
+		return stack.isEmpty() ? 1 : 0;
+    }
 
 }
