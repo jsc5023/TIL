@@ -11,7 +11,7 @@ public class Plain_Square {
 	}
 
 	public static long solution(int w, int h) {
-		long answer = w * h;
+		long answer = (long)w * (long)h;
         long gcd_v = gcd(w,h);
         answer = answer - (gcd_v * ((w/gcd_v) + (h/gcd_v) -1));
         
