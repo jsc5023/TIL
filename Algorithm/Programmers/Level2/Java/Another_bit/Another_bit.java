@@ -22,39 +22,27 @@ public class Another_bit {
 		
 		long result = number;
 		String numberBinary = Long.toBinaryString(number);
-		boolean checkCondition = false;
 		
 		if(number % 2 == 0)
 			return result+1;
-		while(!checkCondition) {
-			result++;
-			String nowBinary = Long.toBinaryString(result);
-			if(Compare_Binary(numberBinary, nowBinary))
-				checkCondition = true;
-		}
-		
-		return result;
-	}
+		else{
+            int lastindex =  numberBinary.lastIndexOf("0");
+            int firstindex = numberBinary.indexOf("1",lastindex);
+            if(lastindex==-1){
+                result+=1;
+                numberBinary =  Long.toBinaryString(result);
+                numberBinary = numberBinary.substring(0,2)+
+                		numberBinary.substring(2,numberBinary.length()).replace("0","1");
+
+            }else{
+            	numberBinary = numberBinary.substring(0,lastindex)+"1"+
+            			numberBinary.substring(lastindex+1,firstindex)+"0"+
+            			numberBinary.substring(firstindex+1,numberBinary.length());
+            }
+        
+            result = Long.parseLong(numberBinary,2); // 이진수를 변환
+        }
 	
-	public static boolean Compare_Binary(String numberBinary, String nowBinary) {
-		
-		boolean compareResult = false;
-		
-		int cnt = 0;
-		
-		if(numberBinary.length() != nowBinary.length())
-			numberBinary = "0" + numberBinary;
-		
-		for (int i = 0; i < numberBinary.length(); i++) {
-			if(numberBinary.charAt(i) != nowBinary.charAt(i))
-				cnt++;
-			if(cnt > 3)
-				break;
-		}
-		
-		if(cnt > 0 && cnt <= 2)
-			compareResult = true;
-		
-		return compareResult;
+		return result;
 	}
 }
