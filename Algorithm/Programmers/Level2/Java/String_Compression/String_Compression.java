@@ -3,29 +3,56 @@ public class String_Compression {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "aabbaccc";
+		String s = "ababcdcdababcdcd";
 		System.out.print(solution(s));
 	}
 	
     public static int solution(String s) {
     	
-    	int answer = 0;
+    	int answer = Integer.MAX_VALUE;
     	
-    	// 핵심은 subString을 나눠서 풀어야됩니다.
-    	// 우선 인터넷 참조로 풉니다.(계속틀림)
     	if(s.length() == 1)
     		return 1;
     	
-    	// 나눠서 압축할려면 아무리 커도 절반입니다.
-    	for (int i = 0; i < s.length() / 2; i++) {
-			String str = "";
-			String temp = "";
-			int cnt = 1;
+    	for (int i = 1; i < s.length() / 2; i++) {
 			
+    		String nowAddStr = "";
+    		String tempStr = "";
+    		int cnt = 1;
+    		
+    		for (int j = 0; j < s.length() / i; j++) {
+				
+    			if(tempStr.equals(s.substring(j * i, (j * i) + i))) {
+    				cnt++;
+    				continue;
+    			}
+    			
+    			if(cnt == 1) {
+        			nowAddStr += tempStr;
+    			}
+    			else {
+    				nowAddStr += cnt + tempStr;
+                    cnt = 1;
+    			}
+    			
+                tempStr = s.substring(j*i,(j*i)+i);
+			}
+    		
+    		if(cnt == 1) {
+    			nowAddStr += tempStr;
+			}
+			else {
+				nowAddStr += cnt + tempStr;
+                cnt = 1;
+			}
+
+            if(s.length() %i !=0){
+            	nowAddStr +=s.substring(s.length()-s.length()%i,s.length());
+            }
+
+            answer = answer > nowAddStr.length() ? nowAddStr.length() : answer;
 		}
     	
-      
-            
         return answer;
     }
 
