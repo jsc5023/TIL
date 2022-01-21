@@ -14,7 +14,7 @@ public class String_Compression {
     	if(s.length() == 1)
     		return 1;
     	
-    	for (int i = 1; i < s.length() / 2; i++) {
+    	for (int i = 1; i <= s.length() / 2; i++) {
 			
     		String nowAddStr = "";
     		String tempStr = "";
@@ -26,7 +26,7 @@ public class String_Compression {
     				cnt++;
     				continue;
     			}
-    			
+
     			if(cnt == 1) {
         			nowAddStr += tempStr;
     			}
