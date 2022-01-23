@@ -34,19 +34,19 @@ public class Delivery {
         	arr[road[i][0]][road[i][1]] = road[i][2];
         	arr[road[i][1]][road[i][0]] = road[i][2];
         }
-//        
-//        /* 출발점에서 도착점까지 걸리는 최소 시간 구하기 */
-        for (int x = 1; x <= N; x++) {
-            for (int y = 1; y <= N; y++) {
-                for (int z = 1; z <= N; z++) {
-                    if (y == z) continue; // 출발점과 도착점이 같으면 걸리는 시간은 0 (이미 최솟값)
-                    
-                    if (arr[y][z] > arr[y][x] + arr[x][z])
-                        arr[y][z] = arr[y][x] + arr[x][z];
-                }
-            }
-        }
-//        
+        
+        for (int i = 1; i <= N; i++) {
+			for (int j = 0; j <= N; j++) {
+				for (int j2 = 0; j2 < N; j2++) {
+					if(j2 == j)
+						continue;
+					
+					if(arr[j][j2] > arr[j][i] + arr[i][j2])
+						arr[j][j2] = arr[j][i] + arr[i][j2];
+				}
+			}
+		}
+
         for (int i = 1; i <= N; i++) {
             if (arr[1][i] <= K) answer++;
         }
