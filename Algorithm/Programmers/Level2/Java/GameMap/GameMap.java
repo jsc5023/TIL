@@ -3,7 +3,7 @@ import java.util.Queue;
 
 public class GameMap {
 
-	static int[] dx = {-1, 1, 0, 1}; // 상하좌우
+	static int[] dx = {-1, 1, 0, 0}; // 상하좌우
 	static int[] dy = {0, 0, -1, 1}; // 상하좌우
 	static boolean[][] visited;
 	
@@ -17,7 +17,7 @@ public class GameMap {
         int answer = -1;
         // bfs 문제풀이
         visited = new boolean[maps.length][maps[0].length];
-        bfs(0, 0, maps);
+        answer = bfs(0, 0, maps);
 
         return answer;
     }
@@ -36,13 +36,13 @@ public class GameMap {
 				return now.cnt;
 				
 			for (int i = 0; i < 4; i++) {
-				int nextX = x + dx[i];
-				int nextY = y + dy[i];
+				int nextX = now.x + dx[i];
+				int nextY = now.y + dy[i];
 				
 				if(nextX >= 0 && nextY >= 0 && nextX <= xMaxLength  && nextY <= yMaxLength) {
 					if(maps[nextX][nextY] == 1 && !visited[nextX][nextY]) {
 						visited[nextX][nextY] = true;
-						queue.offer(new Position(nextX, nextY, now.cnt));
+						queue.offer(new Position(nextX, nextY, now.cnt + 1));
 					}
 				}
 			}
