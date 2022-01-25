@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class GameMap {
 
@@ -12,25 +14,52 @@ public class GameMap {
 	}
 
 	public static int solution(int[][] maps) {
-		// bfs 또는 dfs로 풀어야되는문제
-		
         int answer = -1;
-        dfs(0, 0, maps);
+        // bfs 문제풀이
+        visited = new boolean[maps.length][maps[0].length];
+        bfs(0, 0, maps);
 
         return answer;
     }
 	
-	public static int dfs(int x, int y, int[][] maps) {
+	public static int bfs(int x, int y, int[][] maps) {
+		Queue<Position> queue = new LinkedList<>();
+		queue.offer(new Position(x, y, 1));
 		
-		int xLength = maps.length;
-		int yLength = maps[0].length;
-		for (int i = 0; i < 4; i++) {
-			int nextX = x + dx[i];
-			int nextY = y + dy[i];
+		int xMaxLength = maps.length - 1;
+		int yMaxLength = maps[0].length - 1;
+		
+		while(!queue.isEmpty()) {
+			Position now = queue.poll();
 			
-			if(nextX >= 0 && nextY >= 0 && nextX < xLength  && nextY < yLength)
-				maps[]
+			if(now.x == xMaxLength && now.y == yMaxLength)
+				return now.cnt;
+				
+			for (int i = 0; i < 4; i++) {
+				int nextX = x + dx[i];
+				int nextY = y + dy[i];
+				
+				if(nextX >= 0 && nextY >= 0 && nextX <= xMaxLength  && nextY <= yMaxLength) {
+					if(maps[nextX][nextY] == 1 && !visited[nextX][nextY]) {
+						visited[nextX][nextY] = true;
+						queue.offer(new Position(nextX, nextY, now.cnt));
+					}
+				}
+			}
 		}
-		return 1;
+		
+		return -1;
+	}
+	
+	public static class Position{
+		int x;
+		int y;
+		int cnt;
+		
+		public Position(int x, int y, int cnt) {
+			this.x = x;
+            this.y = y;
+            this.cnt = cnt;
+		}
 	}
 }
