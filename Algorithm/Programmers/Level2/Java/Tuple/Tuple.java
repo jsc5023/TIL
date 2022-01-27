@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Tuple {
 	
@@ -13,14 +12,12 @@ public class Tuple {
 	}
 	
 	public static int[] solution(String s) {
-		// 1. ∆©«√¿ª ∏∏µÈ ArrayList ∞¥√º.
-		
 		ArrayList<Integer> list = new ArrayList<>();
 		
 		s = s.substring(2, s.length());
-		s = s.substring(0, s.length() - 2).replace("},{", "|");
+		s = s.substring(0, s.length() - 2).replace("},{", ":");
 		
-		String str[] = s.split("|"); 
+		String str[] = s.split(":"); 
 		
 		Arrays.sort(str, (s1, s2) -> Integer.compare(s1.length(), s2.length()));
         
