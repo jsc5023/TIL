@@ -33,7 +33,7 @@ public class OpenChatRoom {
 			int idx = arr.get(i).indexOf("´Ô");
 			String id = arr.get(i).substring(0, idx);
 			String[] tmp = arr.get(i).split(" ");
-			answer[i] = map.get(id) + "´ÔÀÌ " + temp[1];
+			answer[i] = map.get(id) + "´ÔÀÌ " + tmp[1];
 		}
 		
 		return answer;
