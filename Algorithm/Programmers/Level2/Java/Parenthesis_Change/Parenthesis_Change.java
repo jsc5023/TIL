@@ -36,4 +36,30 @@ public class Parenthesis_Change {
         }
         return answer;
     }
+	
+	public static boolean check(String p) {
+		Stack<Character> stack = new Stack<>();
+		for (int i = 0; i < p.length(); i++) {
+			if(p.charAt(i) == '(')
+    			stack.add(p.charAt(i));
+			else {
+				if(stack.isEmpty())
+					return false;
+				else
+					return true;
+			}
+		}
+		if(!stack.isEmpty())
+			return false;
+		return true;
+	}
+	
+	public static String dfs(String s) {
+		if(s.length() == 0 )
+			return "";
+		String u = "";
+		String v = "";
+		
+		return s;
+	}
 }
