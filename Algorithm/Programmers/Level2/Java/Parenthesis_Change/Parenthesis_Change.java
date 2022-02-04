@@ -4,7 +4,7 @@ public class Parenthesis_Change {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String p = ")(";
+		String p = "()))((()";
 		System.out.print(solution(p));
 	}
 
@@ -25,7 +25,7 @@ public class Parenthesis_Change {
 				if(stack.isEmpty())
 					return false;
 				else
-					return true;
+					stack.pop();
 			}
 		}
 		if(!stack.isEmpty())
@@ -49,7 +49,7 @@ public class Parenthesis_Change {
 				cnt1++;
 			else
 				cnt2++;
-			if((cnt1 != 0 && cnt2 != 0) && cnt1 == cnt2) {
+			if((cnt1 != 0 && cnt2 != 0) && (cnt1 == cnt2)) {
 				u = s.substring(0, i+1);
 				if(i != s.length() - 1)
 					v = s.substring(i+1, s.length());
@@ -60,9 +60,7 @@ public class Parenthesis_Change {
 		if(!check(u)) {
 			String tmp = "(" + dfs(v);
 			tmp += ")";
-			u = u.substring(1, u.length() - 1).replace("(", ".");
-			u = u.replace(")", "(");
-			u = u.replace(".", ")");
+			u = u.substring(1, u.length() - 1).replace("(", ".").replace(")", "(").replace(".", ")");
 			tmp += u;
 			return tmp;
 		}
