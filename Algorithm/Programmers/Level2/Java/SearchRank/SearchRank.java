@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchRank {
 
@@ -10,9 +12,28 @@ public class SearchRank {
 	public static int[] solution(String[] info, String[] query) {
         int[] answer = {};
         
+        List<UserInfo> userList = new ArrayList<>();
+        
         for (int i = 0; i < info.length; i++) {
+
         	String[] userinfo = info[i].split(" ");
+        	String codingTestProgram = userinfo[0];
+        	String jobGroup = userinfo[1];
+        	String careerGroup = userinfo[2];
+        	String favoritFood = userinfo[3];
+        	int score = Integer.parseInt(userinfo[4]);
+        	UserInfo user = new UserInfo(codingTestProgram, jobGroup, careerGroup, favoritFood, score);
+        	userList.add(user);
+        	
 		}
+        
+        for (int i = 0; i < query.length; i++) {
+			
+        	String[] queryInfo = info[i].split(" and ");
+        	// 조건을 검색하는 방법을 어떻게 하면될것인가
+        	
+		}
+        
         
         return answer;
     }
