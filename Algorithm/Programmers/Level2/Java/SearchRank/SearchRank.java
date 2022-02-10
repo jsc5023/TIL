@@ -10,8 +10,7 @@ public class SearchRank {
 	}
 	
 	public static int[] solution(String[] info, String[] query) {
-        int[] answer = {};
-        
+       
         List<UserInfo> userList = new ArrayList<>();
         
         for (int i = 0; i < info.length; i++) {
@@ -27,11 +26,28 @@ public class SearchRank {
         	
 		}
         
+        int[] answer = new int[query.length];
+        
+        
         for (int i = 0; i < query.length; i++) {
-			
-        	String[] queryInfo = info[i].split(" and ");
-        	// 조건을 검색하는 방법을 어떻게 하면될것인가
-        	
+        	String[] queryInfo = query[i].split(" and ");
+        	String codingTestProgram = queryInfo[0];
+        	String jobGroup = queryInfo[1];
+        	String careerGroup = queryInfo[2];
+        	String[] favoritFood_Score = queryInfo[3].split(" ");
+        	String favoritFood = favoritFood_Score[0];
+        	int score = Integer.parseInt(favoritFood_Score[1]);
+        	int index = 0;
+        	for (UserInfo user : userList) {
+				if((codingTestProgram.equals("-") || user.codingTestProgram.equals(codingTestProgram))
+						&& (jobGroup.equals("-") || user.jobGroup.equals(jobGroup))
+						&& (careerGroup.equals("-") || user.careerGroup.equals(careerGroup))
+						&& (favoritFood.equals("-") || user.favoritFood.equals(favoritFood))
+						&& (user.score >= score)) {
+					index++;
+				}
+			}
+        	answer[i] = index;
 		}
         
         
