@@ -11,6 +11,9 @@ public class SearchRank {
 	
 	public static int[] solution(String[] info, String[] query) {
        
+		// 풀이 변경(이분탐색으로 풀어야합니다.)
+		
+		//Binary Search
         List<UserInfo> userList = new ArrayList<>();
         
         for (int i = 0; i < info.length; i++) {
@@ -53,6 +56,22 @@ public class SearchRank {
         
         return answer;
     }
+	
+	static int binarySearch(String query, int score)
+    {
+        if(!map.containsKey(query)) return 0;
+        ArrayList<Integer> tmpList = map.get(query);
+        int start = 0, end = tmpList.size()-1;
+        while(start <= end)
+        {
+            int mid = (start + end) / 2;
+
+            if(score > tmpList.get(mid)) start = mid + 1;
+            else end = mid - 1;
+        }
+        return tmpList.size() - start;
+    }
+	
 	
 	public static class UserInfo{
 		String codingTestProgram;
