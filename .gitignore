@@ -19,3 +19,8 @@ obj/
 build/
 /bin1/
 java/build/**
+
+# Intelij
+.idea
+/shelf/
+/workspace.xml
