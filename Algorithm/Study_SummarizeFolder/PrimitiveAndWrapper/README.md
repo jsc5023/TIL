@@ -16,3 +16,16 @@ Java 의 형태로 기본형(원시타입이라고도 부릅니다.)(Primitive T
 (예를들어 ArrayList<Integer> 처럼)
 그리고 기본형을 참조형으로 변환 가능하고(boxing), 역으로 참조형을 기본형으로도 가능합니다.(UnBoxing)
 
+```java
+Integer a = new Integer(1);
+Integer b = new Integer(2);
+  
+int unboxing_a = (int) a; // unboxing;
+int unboxing_b = (int) b; // unboxing;
+  
+int c = 1;
+int d = 2;
+  
+Integer boxing_a = (Integer) a; // boxing;
+Integer boxing_b = (Integer) b; // boxing;
+```
