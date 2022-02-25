@@ -5,7 +5,7 @@
   fruit_warehouse의 컬럼이 fruit, amount라고 가정하고 fruit에 amount 라는 데이터가 존재하고 그 ID의 존재가 NULL 일때
 SELECT amount FROM fruit_warehouse WHERE fruit = 'apple' 이면 ID의값은 NULL이 반환됩니다.
 
-![image](https://user-images.githubusercontent.com/60413291/155727703-cf055caa-8b97-4ece-999d-faa6ec3c87c7.png)
+![image](https://user-images.githubusercontent.com/60413291/155728537-92c4266f-a35d-4838-a23b-e04eaa3f7d8a.png)
 
 <br/>
 하지만, 중요한것은 결국 테이블은 존재하기 때문에 DataSet db = (TEST 테이블 반환값) 을 작성했을때 db.Tables[0].Rows.Count 의 값이 결국 0 이 아니라 1이 나오게 됩니다.
