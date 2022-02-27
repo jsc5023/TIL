@@ -1,7 +1,6 @@
 # NULL 관련 C#과 MSSQL의 오류 정리
 
-> 1. 데이터 테이블에서 
-기본적으로 DataSet을 이용해서 테이블을 불러올때, fruit_warehouse라는 테이블이 존재하면서
+데이터 테이블에서 기본적으로 DataSet을 이용해서 테이블을 불러올때, fruit_warehouse라는 테이블이 존재하면서
   fruit_warehouse의 컬럼이 fruit, amount라고 가정하고 fruit에 amount 라는 데이터가 존재하고 그 ID의 존재가 NULL 일때
 SELECT amount FROM fruit_warehouse WHERE fruit = 'apple' 이면 ID의값은 NULL이 반환됩니다.
 
@@ -22,5 +21,10 @@ C#에서 만약 데잉터 베이스를 저장한다고 가정했을경우 파라
 <br/>
 예를들어 저장 프로시저 usp_friut_warehouse_sel의 변수가 @friut nvarchar(20)이라고 가정했을 경우
 C#의 값의 파라미터가 @friut null로 들어가면 프로시저의 변수는 null로 들어갈것 같지만 그렇지 않다.
-<
-> 만약 NULL값을 넣고싶다면, DBNull의 형태를 이용해야한다.
+
+그리고, Db에서 C#으로 불러올때도 null의 값이 string으로 불러오거나, DBNull의 값으로 불러와지지 진짜로 null값이 불러와서 나타나지진 않는다.
+<br/>
+결론은
+
+> 만약 NULL값을 넣고싶다면, DBNull의 형태를 이용해야한다. 반대로 DB에서 NULL의 값을 불러오고 싶으면, C#에서 DBNull로 가는 과정이 반드시 필요합니다.
+
