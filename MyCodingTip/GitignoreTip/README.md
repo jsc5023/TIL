@@ -15,7 +15,7 @@ git push origin master
 이렇게 하면 gitignore에 있는 확장자, 혹은 폴더가 지워집니다.(스택오버플로우의 gitignore의 이미 커밋되있는 파일 제거(로컬에는 영향 없음))
 
 <br/> 
-[참조 링크](https://stackoverflow.com/questions/7927230/remove-directory-from-remote-repository-after-adding-them-to-gitignore)
+[참조링크](http://stackoverflow.com/questions/7927230/remove-directory-from-remote-repository-after-adding-them-to-gitignore)
 스택오버플로우의 gitignore의 이미 커밋되있는 파일 제거, 로컬에는 영향 없음
 
 - Github에 올릴때 주의사항
