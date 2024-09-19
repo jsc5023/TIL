@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -9,8 +10,9 @@ public class boj_15686_치킨배달 {
     static FastReader scan = new FastReader();
     static int N, M;
     static int[][] arr;
-    static List<int[]> chickenShops, houses;
-    static int min = Integer.MAX_VALUE;
+    static List<int[]> chickenShops = new ArrayList<>();
+    static List<int[]> houses = new ArrayList<>();
+    static int minChickenDistance = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
         input();
@@ -21,8 +23,10 @@ public class boj_15686_치킨배달 {
         N = scan.nextInt();
         M = scan.nextInt();
 
+        arr = new int[N][N];
+
         for(int i = 0; i < N; i++) {
-            for(int j = 0; j < M; j++) {
+            for(int j = 0; j < N; j++) {
                 arr[i][j] = scan.nextInt();
                 if(arr[i][j] == 1) {
                     houses.add(new int[]{i, j});
@@ -34,13 +38,38 @@ public class boj_15686_치킨배달 {
     }
 
     private static void pro() {
-        rec_func(0);
+        combination(new ArrayList<>(), 0, 0);
+        System.out.print(minChickenDistance);
     }
 
-    private static void rec_func(int cnt) {
-        if(M == cnt) {
-        
+    private static void combination(List<int[]> selected, int start, int depth) {
+        if(depth == M) {
+
+            int cityChickenDistance = calculateChickenDistance(selected);
+            minChickenDistance = Math.min(minChickenDistance, cityChickenDistance);
+            return;
         }
+
+        for(int i = start; i < chickenShops.size(); i++) {
+            selected.add(chickenShops.get(i));
+            combination(selected, i + 1, depth + 1);
+            selected.remove(selected.size() - 1);
+        }
+    }
+
+    private static int calculateChickenDistance(List<int[]> selected) {
+        int totalDistance = 0;
+
+        for(int[] house : houses) {
+            int minDistance = Integer.MAX_VALUE;
+            for(int[] chickenShop : selected) {
+                int distance = Math.abs(house[0] - chickenShop[0]) + Math.abs(house[1] - chickenShop[1]);
+                minDistance = Math.min(minDistance, distance);
+            }
+            totalDistance += minDistance;
+        }
+
+        return totalDistance;
     }
 
     public static class FastReader {
