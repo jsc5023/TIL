@@ -10,30 +10,25 @@ public class boj_1202_보석도둑 {
     static FastReader scan = new FastReader();
     static int N, K;
     static int[] weights, values, bags;
-    static PriorityQueue<Jewel> jewels;
-    static int money;
+    static Jewel[] jewels;
+    static long money;
 
     public static void main(String[] args) {
         input();
         pro();
+        System.out.print(money);
     }
 
     private static void input() {
         N = scan.nextInt();
         K = scan.nextInt();
 
-        jewels = new PriorityQueue<>((o1, o2) -> {
-            if(o1.value != o2.value) {
-                return o2.value - o1.value;
-            }
-
-            return o2.weight - o1.weight;
-        });
+        jewels = new Jewel[N];
 
         for(int i = 0; i < N; i++) {
             int weight = scan.nextInt();
             int value = scan.nextInt();
-            jewels.add(new Jewel(weight, value));
+            jewels[i] = new Jewel(weight, value);
         }
 
         bags = new int[K];
@@ -44,15 +39,21 @@ public class boj_1202_보석도둑 {
     }
 
     private static void pro() {
+        Arrays.sort(jewels, (o1, o2) -> o1.weight - o2.weight);
+
         Arrays.sort(bags);
 
-        for(int i = bags.length - 1; i >= 0; i--) {
-            while(!jewels.isEmpty()) {
-                Jewel jewel = jewels.peek();
+        PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> o2 - o1);
 
-                if(bags[i] < jewel.weight) {
+        int jewelIndex = 0;
+        for(int i = 0; i < K; i++) {
+            while (jewelIndex < N && jewels[jewelIndex].weight <= bags[i]) {
+                pq.add(jewels[jewelIndex].value);
+                jewelIndex++;
+            }
 
-                }
+            if (!pq.isEmpty()) {
+                money += pq.poll();
             }
         }
     }
