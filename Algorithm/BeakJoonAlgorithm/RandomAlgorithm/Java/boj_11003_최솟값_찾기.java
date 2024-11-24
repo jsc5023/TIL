@@ -20,6 +20,12 @@ public class boj_11003_최솟값_찾기 {
 
         StringBuilder sb = new StringBuilder();
 
+        for(int i = 0; i < N; i++) {
+            if(i - L + 1 <= 0) {
+                sb.append()
+            }
+        }
+
         System.out.println(sb);
     }
 
