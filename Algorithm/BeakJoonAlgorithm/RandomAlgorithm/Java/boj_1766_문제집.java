@@ -7,13 +7,15 @@ public class boj_1766_문제집 {
 
     static FastReader scan = new FastReader();
     static int N, M;
+    static int[][] arr;
 
     public static void main(String[] args) {
         N = scan.nextInt();
         M = scan.nextInt();
 
-        for(int i = 0; i < M; i++) {
 
+        for(int i = 0; i <= N; i++) {
+            
         }
     }
 

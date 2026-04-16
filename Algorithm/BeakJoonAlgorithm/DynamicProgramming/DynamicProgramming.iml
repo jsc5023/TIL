@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example10844" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example11053" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example11054" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example11055" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example11057" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example11722" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example11726" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example11727" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example1463" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example1699" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example1912" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example2011" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example2133" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example2156" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example2193" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example2225" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example2579" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example9095" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example9461" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Example9465" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
