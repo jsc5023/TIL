@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class boj_9935_문자열_폭발 {
+public class boj_9935_문자열_폭발_재풀이 {
     static FastReader scan = new FastReader();
     static String s, boom;
 
@@ -31,7 +31,7 @@ public class boj_9935_문자열_폭발 {
                 boolean isBoom = true;
 
                 for(int j = 0; j < boom.length(); j++) {
-                    if(stack.get(stack.size() - boom.length() + j) != boom.charAt(j)) {
+                    if(stack.get(stack.size() - boom.length() -+ j) != boom.charAt(j)) {
                         isBoom = false;
                         break;
                     }
